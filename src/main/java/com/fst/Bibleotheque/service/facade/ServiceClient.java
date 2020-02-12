@@ -8,12 +8,9 @@ package com.fst.Bibleotheque.service.facade;
 import com.fst.Bibleotheque.bean.Client;
 import java.util.List;
 
-/**
- *
- * @author dell
- */
 public interface ServiceClient {
-    public Client findByCne(String cne);
-    public List<Client> findBypointFiabliteLessthan(int x);
+    public Client findByCin(String cne);
+    public List<Client> findBypointFiabliteLessThan(int x);
     public List<Client> trouver5PointFiablites();
+        public int save(Client client);
 }

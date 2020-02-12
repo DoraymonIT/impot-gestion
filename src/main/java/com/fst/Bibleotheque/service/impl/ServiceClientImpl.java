@@ -22,22 +22,28 @@ public class ServiceClientImpl implements ServiceClient{
     @Autowired
     private ClientDao clientdao;
     @Override
-    public Client findByCne(String cne) {
-        return clientdao.findByCne(cne);
+    public Client findByCin(String cne) {
+        return clientdao.findByCin(cne);
     }
 
     @Override
-    public List<Client> findBypointFiabliteLessthan(int x) {
-        return clientdao.findBypointFiabliteLessthan(x);
+    public List<Client> findBypointFiabliteLessThan(int x) {
+        return clientdao.findBypointFiabliteLessThan(x);
     }
 
     @Override
     public List<Client> trouver5PointFiablites() {
-        if(findBypointFiabliteLessthan(5)!=null) {
-            return findBypointFiabliteLessthan(5);
+        if(findBypointFiabliteLessThan(5)!=null) {
+            return findBypointFiabliteLessThan(5);
             
         }
         else return null;
         }
+
+    @Override
+    public int save(Client client) {
+        clientdao.save(client);
+        return 1;
+    }
     
 }

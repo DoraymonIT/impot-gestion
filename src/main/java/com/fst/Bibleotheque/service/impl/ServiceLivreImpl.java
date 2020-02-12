@@ -10,11 +10,13 @@ import com.fst.Bibleotheque.repository.LivreDao;
 import com.fst.Bibleotheque.service.facade.ServiceLivre;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  *
  * @author dell
  */
+@Service
 public class ServiceLivreImpl implements ServiceLivre{
 @Autowired
 private LivreDao livreDao;
