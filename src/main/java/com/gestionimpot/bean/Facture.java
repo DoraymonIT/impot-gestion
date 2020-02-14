@@ -25,7 +25,7 @@ public class Facture implements Serializable{
 	protected Double montantTTC;
 	protected Double tva;
 
-//Nombre de lignes facturées
+//Nombre de lignes facturées  dg
 
 	public Long getId() {
 		return id;
