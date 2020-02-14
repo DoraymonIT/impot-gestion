@@ -28,8 +28,7 @@ public class Livre implements Serializable {
     private String titre;
     private int nbrExmplaire;
     private int nmbrJourEmprunt;
-    @OneToMany(mappedBy = "livre")
-private List<Emprunt> emprunts;
+
 
     public String getTitre() {
         return titre;

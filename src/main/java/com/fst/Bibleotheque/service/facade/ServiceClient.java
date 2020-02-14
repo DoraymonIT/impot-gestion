@@ -11,6 +11,6 @@ import java.util.List;
 public interface ServiceClient {
     public Client findByCin(String cne);
     public List<Client> findBypointFiabliteLessThan(int x);
-    public List<Client> trouver5PointFiablites();
-        public int save(Client client);
+    public List<Client> clientNonFiable();
+    public List<Client> findAll();
 }

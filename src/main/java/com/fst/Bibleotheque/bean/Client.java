@@ -6,12 +6,10 @@
 package com.fst.Bibleotheque.bean;
 
 import java.io.Serializable;
-import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 
 /**
  *
@@ -26,17 +24,6 @@ public class Client implements Serializable {
     private Long id;
     private String cin;
     private int pointFiablite;
-    @OneToMany(mappedBy = "client")
-    private List<Emprunt> emprunts;
-
-    public List<Emprunt> getEmprunts() {
-        return emprunts;
-    }
-
-    public void setEmprunts(List<Emprunt> emprunts) {
-        this.emprunts = emprunts;
-    }
-    
 
     public String getCin() {
         return cin;

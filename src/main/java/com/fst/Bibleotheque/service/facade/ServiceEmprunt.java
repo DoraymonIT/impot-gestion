@@ -14,6 +14,9 @@ import java.util.List;
  * @author dell
  */
 public interface ServiceEmprunt {
-        public int save(Emprunt emprunt);
+    public int save(Emprunt emprunt);
     public List<Emprunt> findByDateRestituerEffe(Date ddd); 
+    public List<Emprunt> findAll();
+    public Emprunt findByLivreTitre(String titre);
+    public Emprunt findByClientCin(String cin);
 }

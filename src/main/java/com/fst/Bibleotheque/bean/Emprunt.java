@@ -31,7 +31,6 @@ public class Emprunt implements Serializable {
     private Client client;
     @ManyToOne
     private Livre livre;
-
     public Livre getLivre() {
         return livre;
     }

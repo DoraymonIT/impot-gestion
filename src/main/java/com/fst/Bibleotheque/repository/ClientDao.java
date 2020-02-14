@@ -9,5 +9,5 @@ import org.springframework.stereotype.Repository;
 public interface ClientDao extends JpaRepository<Client, Long>{
     public Client findByCin(String cne);
     public List<Client> findBypointFiabliteLessThan(int x);
-    
+    public List<Client> findAll();
 }

@@ -15,22 +15,21 @@ public class ClientRestController {
     @Autowired
     private ServiceClient serviceClient;
 
-    @GetMapping("/cne/{cne}")
     public Client findByCin(String cne) {
         return serviceClient.findByCin(cne);
     }
-    @GetMapping("/pointFiablite/{x}")
+
     public List<Client> findBypointFiabliteLessThan(int x) {
         return serviceClient.findBypointFiabliteLessThan(x);
     }
-    @GetMapping("/")
-    public List<Client> trouver5PointFiablites() {
-        return serviceClient.trouver5PointFiablites();
+
+    public List<Client> clientNonFiable() {
+        return serviceClient.clientNonFiable();
     }
-    @PostMapping("/")
-    public int save(Client client) {
-        return serviceClient.save(client);
+
+    public List<Client> findAll() {
+        return serviceClient.findAll();
     }
-    
+
    
 }

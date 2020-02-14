@@ -14,4 +14,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface EmpruntDao extends JpaRepository<Emprunt, Long>{
     public List<Emprunt> findByDateRestituerEffe(Date ddd); 
+    public Emprunt findByLivreTitre(String titre);
+    public Emprunt findByClientCin(String cin);
 }
