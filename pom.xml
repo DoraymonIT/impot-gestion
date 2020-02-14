@@ -8,10 +8,10 @@
 		<version>2.2.4.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.fst</groupId>
-	<artifactId>Bibleotheque</artifactId>
+	<groupId>com.livre</groupId>
+	<artifactId>Gestion-impot</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Bibleotheque</name>
+	<name>Gestion-impot</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
