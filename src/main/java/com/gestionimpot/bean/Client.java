@@ -13,6 +13,7 @@ public class Client implements Serializable {
 	//aazri
 	//ikram
 	//aazri
+	//oolp
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
