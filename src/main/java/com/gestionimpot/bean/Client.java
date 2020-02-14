@@ -15,7 +15,7 @@ public class Client implements Serializable {
 	//ghassane
 	//aazri
 	//8888
-	
+	/////
 =======
 	//aazriuuuuu
 >>>>>>> branch 'master' of https://github.com/DoraymonIT/impot-gestion.git
