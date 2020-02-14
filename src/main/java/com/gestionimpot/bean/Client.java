@@ -11,7 +11,7 @@ import javax.persistence.Id;
 public class Client implements Serializable {
     //ikram
 	//aazri
-	//ikram
+	//ghassane
 	//aazri
 	//8888
 	
