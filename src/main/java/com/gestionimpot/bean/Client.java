@@ -10,8 +10,7 @@ import javax.persistence.Id;
 @Entity
 public class Client implements Serializable {
     //ikram
-	//aazri
-	//nour
+	//aazriuuuuu
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
