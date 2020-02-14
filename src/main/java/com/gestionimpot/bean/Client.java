@@ -9,22 +9,7 @@ import javax.persistence.Id;
 
 @Entity
 public class Client implements Serializable {
-    //ikram
-<<<<<<< HEAD
-	//aazrihhhhhhhhhhhh
-	//nour
-=======
-<<<<<<< HEAD
-	//aazri
-	//ghassane
-	//aazri
-	//8888
-	// nour
-*****
-=======
-	//aazriuuuuu
->>>>>>> branch 'master' of https://github.com/DoraymonIT/impot-gestion.git
->>>>>>> branch 'master' of https://github.com/DoraymonIT/impot-gestion.git
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
