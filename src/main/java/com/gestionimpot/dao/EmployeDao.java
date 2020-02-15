@@ -5,7 +5,7 @@
  */
 package com.gestionimpot.dao;
 
-import com.gestionimpot.bean.Facture;
+import com.gestionimpot.bean.Employe;
 import com.gestionimpot.bean.Societe;
 import java.util.Date;
 import java.util.List;
@@ -17,18 +17,16 @@ import org.springframework.stereotype.Repository;
  * @author dell
  */
 @Repository
-public interface FactureDao extends JpaRepository<Facture, Long> {
+public interface EmployeDao extends JpaRepository<Employe, Long> {
 
-    Facture findBynNumeroFacture(Long numeroFacture);
+    Employe findBynNumeroEmploye(Long numeroEmploye);
 
-    List<Facture> findAll();
+    List<Employe> findAll();
 
-    List<Facture> finfByTva(double tva);
+    List<Employe> finfByCin(String cin);
 
-    List<Facture> findByDatePaiement(Date datePaiement);
+    List<Employe> findBySalaire(double salaire);
 
-    List<Facture> findByDateFacturation(Date dateFacturation);
-    
-    Facture findBysocieteNom(Societe societe);
+    List<Employe> findBysocieteNom(Societe societe);
 
 }
