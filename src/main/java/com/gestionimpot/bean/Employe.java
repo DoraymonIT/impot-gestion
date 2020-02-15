@@ -17,6 +17,7 @@ public class Employe implements Serializable {
         private String prenom;
         private String adresseHabit;
         private String adresseMail;
+        private String sexe;
 	@ManyToOne
 	private Societe societe;
 	private Double prime;
@@ -36,6 +37,14 @@ public class Employe implements Serializable {
 
     public void setCin(String cin) {
         this.cin = cin;
+    }
+
+    public String getSexe() {
+        return sexe;
+    }
+
+    public void setSexe(String sexe) {
+        this.sexe = sexe;
     }
 
     public String getNom() {
