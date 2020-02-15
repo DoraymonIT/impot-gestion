@@ -10,4 +10,5 @@ import java.util.List;
 public interface DeclarationIRDao extends JpaRepository<DeclarationIR , Long> {
 public List<DeclarationIR> findByEmploye(String employe);
 
+
 }

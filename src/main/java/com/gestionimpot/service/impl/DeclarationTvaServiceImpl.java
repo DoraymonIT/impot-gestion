@@ -1,7 +1,9 @@
 package com.gestionimpot.service.impl;
 
 import com.gestionimpot.bean.DeclarationTva;
+import com.gestionimpot.bean.Societe;
 import com.gestionimpot.dao.DeclarationTvaDao;
+import com.gestionimpot.dao.SocieteDao;
 import com.gestionimpot.service.facade.DeclarationTvaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -9,8 +11,10 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 @Service
 public class DeclarationTvaServiceImpl implements DeclarationTvaService {
-@Autowired
-DeclarationTvaDao declarationTvaDao ;
+    @Autowired
+    DeclarationTvaDao declarationTvaDao ;
+    @Autowired
+    SocieteDao societeDao ;
     @Override
     public List<DeclarationTva> findBySociete(String societe) {
         return declarationTvaDao.findBySociete(societe);
@@ -18,11 +22,12 @@ DeclarationTvaDao declarationTvaDao ;
 
     @Override
     public int save(DeclarationTva declarationTva) {
-        try {
+        Societe foundedSociete = societeDao.findByNom(declarationTva.getSociete().getNom()) ;
+        if (foundedSociete == null ) return  -1 ;
+        else {
 
             declarationTvaDao.save(declarationTva);
             return 1;
         }
-        catch (Exception e){return -1;}
     }
 }

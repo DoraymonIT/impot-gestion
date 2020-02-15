@@ -19,12 +19,10 @@ public class TauxDeIRServiceImpl implements TauxDeIRService {
 
     @Override
     public int save(TauxDeIR tauxDeIR) {
-        try {
-            tauxDeIRDao.save(tauxDeIR);
-            return 1 ;
-        } catch (Exception e) {
-            return -1 ;
-        }
+
+        tauxDeIRDao.save(tauxDeIR);
+        return 1 ;
+
     }
-    }
+}
 
