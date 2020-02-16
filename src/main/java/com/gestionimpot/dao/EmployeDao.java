@@ -23,7 +23,7 @@ public interface EmployeDao extends JpaRepository<Employe, Long> {
 
     List<Employe> findAll();
 
-    List<Employe> finfByCin(String cin);
+    Employe findByCin(String cin);
 
     List<Employe> findBySalaire(double salaire);
 

@@ -1,6 +1,5 @@
 package com.gestionimpot.service.impl;
 
-import com.gestionimpot.bean.Client;
 import com.gestionimpot.bean.DeclarationIR;
 
 import com.gestionimpot.bean.Employe;

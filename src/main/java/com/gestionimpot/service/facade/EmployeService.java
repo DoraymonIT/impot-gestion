@@ -10,7 +10,7 @@ public interface EmployeService {
 
     List<Employe> findAll();
 
-    List<Employe> finfByCin(String cin);
+    Employe findByCin(String cin);
 
     List<Employe> findBySalaire(double salaire);
 
