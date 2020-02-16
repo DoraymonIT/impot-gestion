@@ -3,15 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="6adb1126-beeb-46a9-938f-d7e287aa0115" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gestion-impot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Gestion-impot.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/bean/Societe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/bean/Societe.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/dao/SocieteDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/dao/SocieteDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/dao/TypeSocieteDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/dao/TypeSocieteDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/facade/SocieteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/facade/SocieteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/facade/TypeSocieteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/facade/TypeSocieteService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/impl/SocieteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/impl/SocieteServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/impl/TypeSocieteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/impl/TypeSocieteServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/ws/rest/SocieteRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/ws/rest/SocieteRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/ws/rest/TypeSocieteRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/ws/rest/TypeSocieteRestController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +80,8 @@
       <updated>1581704892383</updated>
       <workItem from="1581704908801" duration="936000" />
       <workItem from="1581762468645" duration="4575000" />
-      <workItem from="1581795518697" duration="653000" />
+      <workItem from="1581795518697" duration="1027000" />
+      <workItem from="1581849331084" duration="664000" />
     </task>
     <task id="LOCAL-00001" summary="life is hard">
       <created>1581705262196</created>
@@ -107,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581768445627</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="on behalf of nouhaila">
+      <created>1581796371977</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1581796371977</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,21 +157,22 @@
     <MESSAGE value="life is hard" />
     <MESSAGE value="nothing" />
     <MESSAGE value="Updating the save method" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updating the save method" />
+    <MESSAGE value="on behalf of nouhaila" />
+    <option name="LAST_COMMIT_MESSAGE" value="on behalf of nouhaila" />
   </component>
   <component name="WindowStateProjectService">
     <state x="303" y="58" width="800" height="677" key="#Notifications" timestamp="1581796357031">
       <screen x="51" y="27" width="1315" height="741" />
     </state>
     <state x="303" y="58" width="800" height="677" key="#Notifications/51.27.1315.741@51.27.1315.741" timestamp="1581796357031" />
-    <state x="516" y="109" width="374" height="575" key="#com.intellij.ide.util.MemberChooser" timestamp="1581795984409">
+    <state x="516" y="109" width="374" height="575" key="#com.intellij.ide.util.MemberChooser" timestamp="1581849742131">
       <screen x="51" y="27" width="1315" height="741" />
     </state>
-    <state x="516" y="109" width="374" height="575" key="#com.intellij.ide.util.MemberChooser/51.27.1315.741@51.27.1315.741" timestamp="1581795984409" />
-    <state x="270" y="27" width="866" height="741" key="CommitChangelistDialog2" timestamp="1581796343490">
+    <state x="516" y="109" width="374" height="575" key="#com.intellij.ide.util.MemberChooser/51.27.1315.741@51.27.1315.741" timestamp="1581849742131" />
+    <state x="270" y="27" width="866" height="741" key="CommitChangelistDialog2" timestamp="1581796371258">
       <screen x="51" y="27" width="1315" height="741" />
     </state>
-    <state x="270" y="27" width="866" height="741" key="CommitChangelistDialog2/51.27.1315.741@51.27.1315.741" timestamp="1581796343490" />
+    <state x="270" y="27" width="866" height="741" key="CommitChangelistDialog2/51.27.1315.741@51.27.1315.741" timestamp="1581796371258" />
     <state x="173" y="85" width="1052" height="622" key="MergeDialog" timestamp="1581768498348">
       <screen x="51" y="27" width="1315" height="741" />
     </state>
@@ -192,18 +197,18 @@
       <screen x="51" y="27" width="1315" height="741" />
     </state>
     <state x="466" y="102" width="463" height="589" key="VCS.ChangeListViewerDialog/51.27.1315.741@51.27.1315.741" timestamp="1581762757217" />
-    <state x="303" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1581768524587">
+    <state x="303" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1581796394476">
       <screen x="51" y="27" width="1315" height="741" />
     </state>
-    <state x="303" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2/51.27.1315.741@51.27.1315.741" timestamp="1581768524587" />
+    <state x="303" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2/51.27.1315.741@51.27.1315.741" timestamp="1581796394476" />
     <state x="417" y="190" width="573" height="413" key="git4idea.merge.GitMergeDialog" timestamp="1581762669550">
       <screen x="51" y="27" width="1315" height="741" />
     </state>
     <state x="417" y="190" width="573" height="413" key="git4idea.merge.GitMergeDialog/51.27.1315.741@51.27.1315.741" timestamp="1581762669550" />
-    <state x="360" y="190" width="686" height="413" key="git4idea.merge.GitPullDialog" timestamp="1581768458611">
+    <state x="360" y="190" width="686" height="413" key="git4idea.merge.GitPullDialog" timestamp="1581796384773">
       <screen x="51" y="27" width="1315" height="741" />
     </state>
-    <state x="360" y="190" width="686" height="413" key="git4idea.merge.GitPullDialog/51.27.1315.741@51.27.1315.741" timestamp="1581768458611" />
+    <state x="360" y="190" width="686" height="413" key="git4idea.merge.GitPullDialog/51.27.1315.741@51.27.1315.741" timestamp="1581796384773" />
     <state x="456" y="264" width="494" height="265" key="git4idea.rebase.GitRebaseDialog" timestamp="1581795587206">
       <screen x="51" y="27" width="1315" height="741" />
     </state>

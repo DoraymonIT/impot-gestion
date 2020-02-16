@@ -16,7 +16,7 @@ public class SocieteServiceImpl implements SocieteService {
 
     @Override
     public int save(Societe societe) {
-        Societe findSociete=findByNom(societe.getNom());
+        Societe findSociete=findByRef(societe.getRef());
         if (findSociete != null) {
             return -1;
         }
@@ -28,10 +28,13 @@ public class SocieteServiceImpl implements SocieteService {
 
     }
 
-
+    @Override
+    public Societe findByRef(String ref) {
+        return societeDao.findByRef(ref);
+    }
 
     @Override
-    public Societe findByNom(String nom) {
+    public List<Societe> findByNom(String nom) {
         return societeDao.findByNom(nom);
     }
 

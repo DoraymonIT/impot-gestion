@@ -6,8 +6,8 @@ import com.gestionimpot.bean.Societe;
 
 public interface SocieteService {
     public int save(Societe societe) ;
-
-    public Societe findByNom(String nom);
+    public Societe findByRef(String ref);
+    public List<Societe> findByNom(String nom);
     public List<Societe> findAll();
     public List<Societe> findByAdresse(String adresse);
     public List<Societe> findByCapital(Double capital);

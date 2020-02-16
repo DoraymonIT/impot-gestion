@@ -12,6 +12,10 @@ public class Societe {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	private String nom;
+	private String ref;
+
+
+
 	private String adresse;
 	private Double nbrEmployes;
 	private Double capital;
@@ -89,6 +93,12 @@ public class Societe {
 	public void setTypeSociete(TypeSociete typeSociete) {
 		this.typeSociete = typeSociete;
 	}
+	public String getRef() {
+		return ref;
+	}
 
+	public void setRef(String ref) {
+		this.ref = ref;
+	}
 
 }

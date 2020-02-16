@@ -34,7 +34,10 @@ public class SocieteRestController {
      * @return
      * @see com.gestionimpot.service.facade.SocieteService#findByRef(java.lang.String)
      */
-
+    @GetMapping("/ref/{ref}")
+    public Societe findByRef(@PathVariable String ref) {
+        return societeService.findByRef(ref);
+    }
 
     /**
      * @param nom
@@ -42,7 +45,7 @@ public class SocieteRestController {
      * @see com.gestionimpot.service.facade.SocieteService#findByNom(java.lang.String)
      */
     @GetMapping("/nom/{nom}")
-    public Societe findByNom(@PathVariable String nom) {
+    public List<Societe> findByNom(@PathVariable String nom) {
         return societeService.findByNom(nom);
     }
 
