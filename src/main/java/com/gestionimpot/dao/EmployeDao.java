@@ -24,7 +24,6 @@ public interface EmployeDao extends JpaRepository<Employe, Long> {
     List<Employe> findAll();
 
     Employe findByCin(String cin);
-//
 
     List<Employe> findBySalaire(double salaire);
 
