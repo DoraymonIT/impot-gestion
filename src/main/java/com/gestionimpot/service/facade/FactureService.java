@@ -17,7 +17,6 @@ public interface FactureService {
 
     List<Facture> findByDateFacturation(Date dateFacturation);
 
-    Facture findBysocieteNom(Societe societe);
 
     int save(Facture facture);
 }

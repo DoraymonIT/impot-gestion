@@ -29,6 +29,5 @@ public interface FactureDao extends JpaRepository<Facture, Long> {
 
     List<Facture> findByDateFacturation(Date dateFacturation);
     
-    Facture findBysocieteNom(Societe societe);
 
 }
