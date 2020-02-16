@@ -24,7 +24,7 @@ public class EmployeRestController {
         return employeService.findBynNumeroEmploye(numeroEmploye);
     }
 
-    @GetMapping("")
+    @GetMapping("/")
     public List<Employe> findAll() {
         return employeService.findAll();
     }
