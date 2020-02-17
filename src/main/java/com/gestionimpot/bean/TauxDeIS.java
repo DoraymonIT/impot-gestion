@@ -9,19 +9,22 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
 @Entity
-
 public class TauxDeIS {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	@ManyToOne
 	private DeclarationIS declarationIS;
+        
 	private Date dateDebut;
 	private Date dateFin;
+        //hadi rahha methoda an9adhha mn b3d
 	private Double montantMin;
+        
 	private Double montantMax;
-	private Double pourcentageRetard;
-	/**
+        
+        
+        /**
 	 * @return the declarationIS
 	 */
 	public DeclarationIS getDeclarationIS() {
@@ -81,18 +84,8 @@ public class TauxDeIS {
 	public void setMontantMax(Double montantMax) {
 		this.montantMax = montantMax;
 	}
-	/**
-	 * @return the pourcentageRetard
-	 */
-	public Double getPourcentageRetard() {
-		return pourcentageRetard;
-	}
-	/**
-	 * @param pourcentageRetard the pourcentageRetard to set
-	 */
-	public void setPourcentageRetard(Double pourcentageRetard) {
-		this.pourcentageRetard = pourcentageRetard;
-	}
+	
+	
 
 
 }

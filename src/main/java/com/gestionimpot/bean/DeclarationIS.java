@@ -8,10 +8,16 @@ public class DeclarationIS  {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
-	private Double totalCharge;
-	private Double totalGain;
-	private Double montant;
-	private Double montantPenalite;
+        private String reference;
+        
+        @ManyToOne
+        TauxDeIS tauxdeis;
+        
+        
+        @ManyToOne
+        DeclarationTva Montanttva;
+	
+	
 	@ManyToOne
 	private Societe societe;
 	/**
@@ -20,6 +26,13 @@ public class DeclarationIS  {
 	public Long getId() {
 		return id;
 	}
+         public TauxDeIS getTauxdeis() {
+        return tauxdeis;
+    }
+
+    public void setTauxdeis(TauxDeIS tauxdeis) {
+        this.tauxdeis = tauxdeis;
+    }
 	/**
 	 * @param id the id to set
 	 */
@@ -29,54 +42,8 @@ public class DeclarationIS  {
 	/**
 	 * @return the totalCharge
 	 */
-	public Double getTotalCharge() {
-		return totalCharge;
-	}
-	/**
-	 * @param totalCharge the totalCharge to set
-	 */
-	public void setTotalCharge(Double totalCharge) {
-		this.totalCharge = totalCharge;
-	}
-	/**
-	 * @return the totalGain
-	 */
-	public Double getTotalGain() {
-		return totalGain;
-	}
-	/**
-	 * @param totalGain the totalGain to set
-	 */
-	public void setTotalGain(Double totalGain) {
-		this.totalGain = totalGain;
-	}
-	/**
-	 * @return the montant
-	 */
-	public Double getMontant() {
-		return montant;
-	}
-	/**
-	 * @param montant the montant to set
-	 */
-	public void setMontant(Double montant) {
-		this.montant = montant;
-	}
-	/**
-	 * @return the montantPenalite
-	 */
-	public Double getMontantPenalite() {
-		return montantPenalite;
-	}
-	/**
-	 * @param montantPenalite the montantPenalite to set
-	 */
-	public void setMontantPenalite(Double montantPenalite) {
-		this.montantPenalite = montantPenalite;
-	}
-	/**
-	 * @return the societe
-	 */
+	
+	
 	public Societe getSociete() {
 		return societe;
 	}
