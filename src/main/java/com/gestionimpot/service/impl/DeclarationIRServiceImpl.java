@@ -30,7 +30,7 @@ public class DeclarationIRServiceImpl implements DeclarationIRService {
     @Override
     public int save(DeclarationIR declarationIR) {
         Employe foundedEmploye = employeDao.findByCin(declarationIR.getEmploye().getCin());
-        Societe foundedSociete = societeDao.findByNom(declarationIR.getSociete().getNom());
+        Societe foundedSociete = societeDao.findByRef(declarationIR.getSociete().getRef());
         if(foundedEmploye == null ) return -1 ;
         else if (foundedSociete == null ) return  -2 ;
         else {

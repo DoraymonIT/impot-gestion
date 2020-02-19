@@ -22,7 +22,7 @@ public class DeclarationTvaServiceImpl implements DeclarationTvaService {
 
     @Override
     public int save(DeclarationTva declarationTva) {
-        Societe foundedSociete = societeDao.findByNom(declarationTva.getSociete().getNom()) ;
+        Societe foundedSociete = societeDao.findByRef(declarationTva.getSociete().getRef()) ;
         if (foundedSociete == null ) return  -1 ;
         else {
 
