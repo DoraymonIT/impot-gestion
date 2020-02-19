@@ -2,6 +2,8 @@ package com.gestionimpot.service.impl;
 
 import java.util.List;
 
+import com.gestionimpot.bean.TypeSociete;
+import com.gestionimpot.dao.TypeSocieteDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,19 +14,22 @@ import com.gestionimpot.service.facade.SocieteService;
 public class SocieteServiceImpl implements SocieteService {
     @Autowired
     private SocieteDao societeDao;
-
+    @Autowired
+    private TypeSocieteDao typeSocieteDao ;
 
     @Override
     public int save(Societe societe) {
-        Societe findSociete=findByRef(societe.getRef());
-        if (findSociete != null) {
-            return -1;
-        }
+        Societe foundedSociete=findByRef(societe.getRef());
+        TypeSociete foundedTypeSociete = typeSocieteDao.findByLibelle(societe.getTypeSociete().getLibelle())   ;
+
+        if (foundedSociete != null) return -1;
+
+        else if (foundedTypeSociete  == null ) return -2 ;
+
+
         societeDao.save(societe);
 
         return 1;
-
-
 
     }
 

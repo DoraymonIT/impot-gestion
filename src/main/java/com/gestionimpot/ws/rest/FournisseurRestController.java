@@ -11,10 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
 import com.gestionimpot.bean.Fournisseur;
 import com.gestionimpot.service.facade.FournisseurService;
 @RestController
-	@RequestMapping("impot/fournisseur")
+@RequestMapping("impot/fournisseur")
 public class FournisseurRestController {
 @Autowired
- FournisseurService fournisseurService;
+ FournisseurService fournisseurService  ;
 @GetMapping("/{cin}/cin")
 public Fournisseur findByCin(String cin) {
 	return fournisseurService.findByCin(cin);

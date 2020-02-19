@@ -23,7 +23,7 @@ public class DeclarationIRServiceImpl implements DeclarationIRService {
     SocieteDao societeDao ;
 
     @Override
-    public List<DeclarationIR> findByEmploye(String employe) {
+    public List<DeclarationIR> findByEmploye(Employe employe) {
         return declarationIRDao.findByEmploye(employe);
     }
 

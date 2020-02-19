@@ -19,7 +19,7 @@ public class TypeSocieteServiceImpl implements TypeSocieteService{
         return 1;
     }
     @Override
-    public List<TypeSociete> findByLibelle(String libelle) {
+    public TypeSociete findByLibelle(String libelle) {
         return typeSocieteDao.findByLibelle(libelle);
     }
 }

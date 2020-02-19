@@ -9,6 +9,16 @@ public class DeclarationIR   {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
+	private  String ref ;
+
+	public String getRef() {
+		return ref;
+	}
+
+	public void setRef(String ref) {
+		this.ref = ref;
+	}
+
 	@ManyToOne
 	private Employe employe;
 	@ManyToOne

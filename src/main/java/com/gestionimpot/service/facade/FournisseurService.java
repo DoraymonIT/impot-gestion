@@ -3,8 +3,9 @@ package com.gestionimpot.service.facade;
 import java.util.List;
 
 import com.gestionimpot.bean.Fournisseur;
+import org.springframework.stereotype.Service;
 
-
+@Service
 public interface FournisseurService {
 	  public Fournisseur findByCin(String cin);
       public void save(Fournisseur fournisseur);

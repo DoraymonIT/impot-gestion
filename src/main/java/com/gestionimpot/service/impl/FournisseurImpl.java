@@ -18,6 +18,7 @@ public class FournisseurImpl implements FournisseurService{
 
 	@Override
 	public void save(Fournisseur fournisseur) {
+
 		fournisseurDao.save(fournisseur);
 					
 	}

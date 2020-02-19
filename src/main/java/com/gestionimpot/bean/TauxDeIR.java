@@ -11,6 +11,16 @@ import javax.persistence.Id;
 public class TauxDeIR {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	private  String ref ;
+
+	public String getRef() {
+		return ref;
+	}
+
+	public void setRef(String ref) {
+		this.ref = ref;
+	}
+
 	private Long id;
 	private Date dateDebut;
 	private Date dateFin;

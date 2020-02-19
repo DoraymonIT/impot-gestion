@@ -20,9 +20,9 @@ public class TauxDeIRServiceImpl implements TauxDeIRService {
     @Override
     public int save(TauxDeIR tauxDeIR) {
 
+
         tauxDeIRDao.save(tauxDeIR);
         return 1 ;
-
     }
 }
 

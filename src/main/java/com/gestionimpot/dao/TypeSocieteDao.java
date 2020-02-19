@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
 import com.gestionimpot.bean.TypeSociete;
 @Repository
 public interface TypeSocieteDao extends JpaRepository<TypeSociete, Long> {
-    public List<TypeSociete> findByLibelle(String libelle);
+    public TypeSociete findByLibelle(String libelle);
 
 }
