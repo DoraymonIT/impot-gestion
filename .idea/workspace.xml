@@ -2,54 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6adb1126-beeb-46a9-938f-d7e287aa0115" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/dao/FactureChargeDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/bean/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/bean/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/bean/DeclarationIR.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/bean/DeclarationIR.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/bean/DeclarationIS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/bean/DeclarationIS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/bean/DeclarationTva.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/bean/DeclarationTva.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/bean/Employe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/bean/Employe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/bean/Facture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/bean/Facture.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/bean/FactureCharge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/bean/FactureCharge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/bean/FactureGain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/bean/FactureGain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/bean/Fournisseur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/bean/Fournisseur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/bean/Societe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/bean/Societe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/bean/TauxDeIR.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/bean/TauxDeIR.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/bean/TauxDeIS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/bean/TauxDeIS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/bean/TypeSociete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/bean/TypeSociete.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/dao/ClientDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/dao/ClientDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/dao/DeclarationIRDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/dao/DeclarationIRDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/dao/DeclarationIsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/dao/DeclarationIsDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/dao/DeclarationTvaDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/dao/DeclarationTvaDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/dao/EmployeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/dao/EmployeDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/dao/FactureDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/dao/FactureDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/dao/FactureGainDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/dao/FactureGainDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/dao/FournisseurDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/dao/FournisseurDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/dao/SocieteDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/dao/SocieteDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/dao/TauxDeIRDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/dao/TauxDeIRDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/dao/TauxDeIsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/dao/TauxDeIsDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/dao/TypeSocieteDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/dao/TypeSocieteDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/facade/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/facade/ClientService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/facade/DeclarationIRService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/facade/DeclarationIRService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/facade/DeclarationIsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/facade/DeclarationIsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/facade/DeclarationTvaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/facade/DeclarationTvaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/facade/EmployeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/facade/EmployeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/facade/FactureGainService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/facade/FactureGainService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/facade/FactureService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/facade/FactureService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/facade/FournisseurService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/facade/FournisseurService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/facade/SocieteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/facade/SocieteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/facade/TauxDeIRService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/facade/TauxDeIRService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/facade/TauxDeIsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/facade/TauxDeIsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/facade/TypeSocieteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/facade/TypeSocieteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/impl/ClientServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/impl/ClientServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/impl/DeclarationIRServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/impl/DeclarationIRServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/impl/DeclarationIsImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/impl/DeclarationIsImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/impl/DeclarationTvaServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/impl/DeclarationTvaServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/impl/EmployeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/impl/EmployeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/impl/FactureGainServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/impl/FactureGainServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/impl/FactureServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/impl/FactureServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/impl/FournisseurImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/impl/FournisseurServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/impl/SocieteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/impl/SocieteServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,6 +55,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RunManager">
     <configuration name="GestionImpotApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
@@ -139,7 +93,7 @@
       <workItem from="1581795518697" duration="1027000" />
       <workItem from="1581849331084" duration="1118000" />
       <workItem from="1582114689970" duration="9112000" />
-      <workItem from="1582216747204" duration="15341000" />
+      <workItem from="1582216747204" duration="15845000" />
     </task>
     <task id="LOCAL-00001" summary="life is hard">
       <created>1581705262196</created>
@@ -190,7 +144,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582124628087</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="correct me now 2">
+      <created>1582241226147</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1582241226148</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -254,10 +215,10 @@
       <screen x="51" y="27" width="1315" height="741" />
     </state>
     <state x="456" y="257" width="504" height="290" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/51.27.1315.741@51.27.1315.741" timestamp="1582233269326" />
-    <state x="270" y="27" width="866" height="741" key="CommitChangelistDialog2" timestamp="1582124626987">
+    <state x="270" y="27" width="866" height="741" key="CommitChangelistDialog2" timestamp="1582241220222">
       <screen x="51" y="27" width="1315" height="741" />
     </state>
-    <state x="270" y="27" width="866" height="741" key="CommitChangelistDialog2/51.27.1315.741@51.27.1315.741" timestamp="1582124626987" />
+    <state x="270" y="27" width="866" height="741" key="CommitChangelistDialog2/51.27.1315.741@51.27.1315.741" timestamp="1582241220222" />
     <state x="173" y="85" width="1052" height="622" key="MergeDialog" timestamp="1581768498348">
       <screen x="51" y="27" width="1315" height="741" />
     </state>
@@ -274,10 +235,10 @@
       <screen x="51" y="27" width="1315" height="741" />
     </state>
     <state x="304" y="121" width="799" height="550" key="RollbackChangesDialog/51.27.1315.741@51.27.1315.741" timestamp="1581763120838" />
-    <state x="191" y="27" width="1024" height="741" key="SettingsEditor" timestamp="1581763133389">
+    <state x="191" y="27" width="1024" height="741" key="SettingsEditor" timestamp="1582241464188">
       <screen x="51" y="27" width="1315" height="741" />
     </state>
-    <state x="191" y="27" width="1024" height="741" key="SettingsEditor/51.27.1315.741@51.27.1315.741" timestamp="1581763133389" />
+    <state x="191" y="27" width="1024" height="741" key="SettingsEditor/51.27.1315.741@51.27.1315.741" timestamp="1582241464188" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1581795651465">
       <screen x="51" y="27" width="1315" height="741" />
     </state>
@@ -286,10 +247,10 @@
       <screen x="51" y="27" width="1315" height="741" />
     </state>
     <state x="466" y="102" width="463" height="589" key="VCS.ChangeListViewerDialog/51.27.1315.741@51.27.1315.741" timestamp="1581762757217" />
-    <state x="303" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1582115529613">
+    <state x="303" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1582241272336">
       <screen x="51" y="27" width="1315" height="741" />
     </state>
-    <state x="303" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2/51.27.1315.741@51.27.1315.741" timestamp="1582115529613" />
+    <state x="303" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2/51.27.1315.741@51.27.1315.741" timestamp="1582241272336" />
     <state x="417" y="190" width="573" height="413" key="git4idea.merge.GitMergeDialog" timestamp="1581762669550">
       <screen x="51" y="27" width="1315" height="741" />
     </state>
