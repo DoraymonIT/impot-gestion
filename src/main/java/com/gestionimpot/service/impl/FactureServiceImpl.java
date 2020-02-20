@@ -16,8 +16,8 @@ public class FactureServiceImpl implements FactureService {
     private FactureDao factureDao;
 
     @Override
-    public Facture findBynNumeroFacture(Long numeroFacture) {
-        return factureDao.findBynNumeroFacture(numeroFacture);
+    public Facture findByNumeroFacture(Long numeroFacture) {
+        return factureDao.findByNumeroFacture(numeroFacture);
     }
 
     @Override
@@ -26,8 +26,8 @@ public class FactureServiceImpl implements FactureService {
     }
 
     @Override
-    public List<Facture> finfByTva(double tva) {
-        return factureDao.finfByTva(tva);
+    public List<Facture> findByTva(double tva) {
+        return factureDao.findByTva(tva);
     }
 
     @Override

@@ -6,15 +6,13 @@ import java.util.List;
 
 public interface EmployeService {
 
-    Employe findBynNumeroEmploye(Long numeroEmploye);
+
 
     List<Employe> findAll();
 
     Employe findByCin(String cin);
 
     List<Employe> findBySalaire(double salaire);
-
-    List<Employe> findBysocieteNom(Societe societe);
 
     int save(Employe employe);
     

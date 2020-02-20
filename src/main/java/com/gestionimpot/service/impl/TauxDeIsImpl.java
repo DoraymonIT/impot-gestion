@@ -20,7 +20,7 @@ import org.springframework.stereotype.Service;
 public class TauxDeIsImpl implements TauxDeIsService{
 
     @Autowired
-    TauxDeIsDao tauxdeisdao;
+    private TauxDeIsDao tauxdeisdao;
 
     public TauxDeIS findByDatedebut(Date datedebut) {
         return tauxdeisdao.findByDatedebut(datedebut);

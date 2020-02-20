@@ -7,12 +7,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+//@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @Entity
 public class Facture implements Serializable{
     
@@ -29,7 +27,8 @@ public class Facture implements Serializable{
 	@ManyToOne
 	protected DeclarationTva declarationTva;
 	protected Double montantHT;
-	protected Double montantTTC = getMontantHT()*getTva();
+	protected Double montantTTC ;
+        
 	protected Double tva;
 
 //Nombre de lignes facturées  dg

@@ -19,7 +19,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface EmployeDao extends JpaRepository<Employe, Long> {
 
-    Employe findBynNumeroEmploye(Long numeroEmploye);
+
 
     List<Employe> findAll();
 
@@ -27,6 +27,6 @@ public interface EmployeDao extends JpaRepository<Employe, Long> {
 
     List<Employe> findBySalaire(double salaire);
 
-    List<Employe> findBysocieteNom(Societe societe);
+
 
 }

@@ -19,11 +19,11 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface FactureDao extends JpaRepository<Facture, Long> {
 
-    Facture findBynNumeroFacture(Long numeroFacture);
+    Facture findByNumeroFacture(Long numeroFacture);
 
     List<Facture> findAll();
 
-    List<Facture> finfByTva(double tva);
+    List<Facture> findByTva(double tva);
 
     List<Facture> findByDatePaiement(Date datePaiement);
 

@@ -19,10 +19,7 @@ public class EmployeRestController {
     @Autowired
     private EmployeService employeService;
 
-    @GetMapping("/numeroEmploye/{numeroEmploye}")
-    public Employe findBynNumeroEmploye(@PathVariable Long numeroEmploye) {
-        return employeService.findBynNumeroEmploye(numeroEmploye);
-    }
+
 
     @GetMapping("/")
     public List<Employe> findAll() {

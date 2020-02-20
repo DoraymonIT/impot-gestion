@@ -14,10 +14,7 @@ public class EmployeServiceImpl implements EmployeService {
     @Autowired
     private EmployeDao employeDao;
 
-    @Override
-    public Employe findBynNumeroEmploye(Long numeroEmploye) {
-        return employeDao.findBynNumeroEmploye(numeroEmploye);
-    }
+   
 
     @Override
     public List<Employe> findAll() {
@@ -34,10 +31,7 @@ public class EmployeServiceImpl implements EmployeService {
         return employeDao.findBySalaire(salaire);
     }
 
-    @Override
-    public List<Employe> findBysocieteNom(Societe societe) {
-        return employeDao.findBysocieteNom(societe);
-    }
+ 
 
     @Override
     public int save(Employe employe) {
