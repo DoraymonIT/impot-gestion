@@ -42,7 +42,21 @@ public class EmployeServiceImpl implements EmployeService {
     @Override
     public int save(Employe employe) {
         // Apres je veux faire les conditions if selon besoin 
-        return 1;
+        Employe empFounded = findByCin(employe.getCin());
+        if (empFounded != null) {
+            return -1;}
+//        } else {
+//            for (int i = 0; i < findAll().size(); i++) {
+//                Employe em = findAll().get(i);
+//                if (employe.getCin().equalsIgnoreCase(em.getCin())) ;
+//            }
+//            return -2;
+//        }
+        else if(employe.getSalaire() == 0) {
+            return -2;
+        } else {
+            return 1;
+        }
     }
 
 }

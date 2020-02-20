@@ -7,9 +7,15 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
 import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @Entity
 public class Facture implements Serializable{
+    
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	protected Long id;
@@ -17,12 +23,13 @@ public class Facture implements Serializable{
         protected Long numeroFacture;
 	@ManyToOne
 	protected Societe societe;
+        @Temporal(javax.persistence.TemporalType.DATE)
 	protected Date dateFacturation;
 	protected Date datePaiement;
 	@ManyToOne
 	protected DeclarationTva declarationTva;
 	protected Double montantHT;
-	protected Double montantTTC;
+	protected Double montantTTC = getMontantHT()*getTva();
 	protected Double tva;
 
 //Nombre de lignes facturées  dg
@@ -66,6 +73,7 @@ public class Facture implements Serializable{
     public void setMontantTTC(Double montantTTC) {
         this.montantTTC = montantTTC;
     }
+
 	
 	public Societe getSociete() {
 		return societe;
