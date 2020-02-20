@@ -1,6 +1,7 @@
 package com.gestionimpot.service.impl;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import com.gestionimpot.bean.TypeSociete;
 import com.gestionimpot.dao.TypeSocieteDao;
@@ -17,20 +18,10 @@ public class SocieteServiceImpl implements SocieteService {
     @Autowired
     private TypeSocieteDao typeSocieteDao ;
 
+
     @Override
-    public int save(Societe societe) {
-        Societe foundedSociete=findByRef(societe.getRef());
-        TypeSociete foundedTypeSociete = typeSocieteDao.findByLibelle(societe.getTypeSociete().getLibelle())   ;
-
-        if (foundedSociete != null) return -1;
-
-        else if (foundedTypeSociete  == null ) return -2 ;
-
-
-        societeDao.save(societe);
-
-        return 1;
-
+    public List<Societe> findByTypeSociete(String typeSociete) {
+        return societeDao.findAll().stream().filter(nom -> typeSociete.equals(nom.getTypeSociete().getLibelle())).collect(Collectors.toList()) ;
     }
 
     @Override
@@ -49,18 +40,13 @@ public class SocieteServiceImpl implements SocieteService {
     }
 
     @Override
-    public List<Societe> findByTypeSocieteLibelle(String libelle) {
-        return societeDao.findByTypeSocieteLibelle(libelle);
-    }
-
-    @Override
     public List<Societe> findByAdresse(String adresse) {
         return societeDao.findByAdresse(adresse);
     }
 
     @Override
     public List<Societe> findByCapital(Double capital) {
-        return	societeDao.findByCapital(capital);
+        return societeDao.findByCapital(capital);
     }
 
     @Override
@@ -68,4 +54,32 @@ public class SocieteServiceImpl implements SocieteService {
         return societeDao.findByNbrEmployes(nbrEmployes);
     }
 
+
+    @Override
+    public int save(Societe societe) {
+       Societe foundedSociete = societeDao.findByRef(societe.getRef());
+       TypeSociete foundedTypeSociete = typeSocieteDao.findByLibelle(societe.getTypeSociete().getLibelle());
+        if (foundedTypeSociete == null) {
+            return -2;
+        }
+        if (foundedSociete != null) {
+            return -1;
+        }
+        else {
+            societeDao.save(societe);
+            return 1;
+        }
+    }
+
+    @Override
+    public int deleteByRef(String ref) {
+        Societe foundedSociete = societeDao.findByRef(ref);
+        if (foundedSociete == null) {
+            return -1;
+        }
+        else {
+            societeDao.delete(foundedSociete);
+            return 1;
+        }
+    }
 }

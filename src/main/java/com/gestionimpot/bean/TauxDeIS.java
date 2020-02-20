@@ -1,5 +1,7 @@
 package com.gestionimpot.bean;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.util.Date;
 
 import javax.persistence.Entity;
@@ -13,79 +15,70 @@ public class TauxDeIS {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
+	private String ref ;
 	@ManyToOne
 	private DeclarationIS declarationIS;
-        
+	@JsonFormat(pattern="yyyy-MM-dd")
 	private Date dateDebut;
+	@JsonFormat(pattern="yyyy-MM-dd")
 	private Date dateFin;
-        //hadi rahha methoda an9adhha mn b3d
-	private Double montantMin;
-        
-	private Double montantMax;
-        
-        
-        /**
-	 * @return the declarationIS
-	 */
+	private  double montantMin;
+	private  double montantMax;
+
+	public String getRef() {
+		return ref;
+	}
+
+	public void setRef(String ref) {
+		this.ref = ref;
+	}
+
 	public DeclarationIS getDeclarationIS() {
 		return declarationIS;
 	}
-	/**
-	 * @param declarationIS the declarationIS to set
-	 */
+
 	public void setDeclarationIS(DeclarationIS declarationIS) {
 		this.declarationIS = declarationIS;
 	}
-	/**
-	 * @return the dateDebut
-	 */
+
 	public Date getDateDebut() {
 		return dateDebut;
 	}
-	/**
-	 * @param dateDebut the dateDebut to set
-	 */
+
 	public void setDateDebut(Date dateDebut) {
 		this.dateDebut = dateDebut;
 	}
-	/**
-	 * @return the dateFin
-	 */
+
 	public Date getDateFin() {
 		return dateFin;
 	}
-	/**
-	 * @param dateFin the dateFin to set
-	 */
+
 	public void setDateFin(Date dateFin) {
 		this.dateFin = dateFin;
 	}
-	/**
-	 * @return the montantMin
-	 */
-	public Double getMontantMin() {
+
+	public  double getMontantMin() {
 		return montantMin;
 	}
-	/**
-	 * @param montantMin the montantMin to set
-	 */
-	public void setMontantMin(Double montantMin) {
+
+	public void setMontantMin( double montantMin) {
 		this.montantMin = montantMin;
 	}
-	/**
-	 * @return the montantMax
-	 */
-	public Double getMontantMax() {
+
+	public  double getMontantMax() {
 		return montantMax;
 	}
-	/**
-	 * @param montantMax the montantMax to set
-	 */
-	public void setMontantMax(Double montantMax) {
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public void setMontantMax( double montantMax) {
 		this.montantMax = montantMax;
 	}
-	
-	
-
 
 }

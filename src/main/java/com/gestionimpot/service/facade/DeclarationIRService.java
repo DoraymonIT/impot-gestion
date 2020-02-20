@@ -2,13 +2,21 @@ package com.gestionimpot.service.facade;
 
 import com.gestionimpot.bean.DeclarationIR;
 import com.gestionimpot.bean.Employe;
+import com.gestionimpot.bean.Societe;
+import com.gestionimpot.bean.TauxDeIR;
 
 import java.util.List;
 
 public interface DeclarationIRService {
     public List<DeclarationIR> findByEmploye(Employe employe);
+    public DeclarationIR findByRef(String ref);
+    public List<DeclarationIR> findBySociete(Societe societe);
+    public List<DeclarationIR> findBySalaire(Double salaire);
+    public List<DeclarationIR> findByMontantDeclaration(Double montantDeclaration );
+    public List<DeclarationIR> findByTauxDeIR(TauxDeIR tauxDeIR);
+    public List<DeclarationIR> findByAll();
+    public int save(DeclarationIR declarationIR);
+    public int removeByRef(String ref);
 
-    public  int save(DeclarationIR declarationIR);
-  //  public Long removeByRef(String ref);
 
 }

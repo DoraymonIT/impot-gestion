@@ -3,14 +3,17 @@ package com.gestionimpot.service.facade;
 import java.util.List;
 
 import com.gestionimpot.bean.Societe;
+import com.gestionimpot.bean.TypeSociete;
 
 public interface SocieteService {
-    public int save(Societe societe) ;
-    public Societe findByRef(String ref);
-    public List<Societe> findByNom(String nom);
-    public List<Societe> findAll();
-    public List<Societe> findByAdresse(String adresse);
-    public List<Societe> findByCapital(Double capital);
-    public List<Societe> findByNbrEmployes(Double nbrEmployes);
-    public List<Societe> findByTypeSocieteLibelle(String libelle);
+    List<Societe> findByTypeSociete(String typeSociete);
+    int deleteByRef(String ref);
+    int save(Societe societe) ;
+    Societe findByRef(String ref);
+    List<Societe> findByNom(String nom);
+    List<Societe> findAll();
+    List<Societe> findByAdresse(String adresse);
+    List<Societe> findByCapital(Double capital);
+    List<Societe> findByNbrEmployes(Double nbrEmployes);
+
 }

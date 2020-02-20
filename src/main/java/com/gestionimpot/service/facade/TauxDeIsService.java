@@ -5,15 +5,22 @@
  */
 package com.gestionimpot.service.facade;
 
+import com.gestionimpot.bean.DeclarationIS;
 import com.gestionimpot.bean.TauxDeIS;
 import java.util.Date;
+import java.util.List;
 
-/**
- *
- * @author Zakaria
- */
+
 public interface TauxDeIsService {
-    public int save(TauxDeIS tauxdeis ); 
-    public double pourcentageRetard(Date datefacturation,Date datepayment);
-    
+
+    double pourcentageRetard(Date datefacturation,Date datepayment);
+    TauxDeIS findByDeclarationIS(DeclarationIS declarationIS);
+    List<TauxDeIS> findByDatedebut(Date datedebut);
+    List<TauxDeIS> findAll();
+    List<TauxDeIS> findByDateFin(Date dateFin);
+    List<TauxDeIS> findByMontantMin( double montantMin);
+    List<TauxDeIS> findByMontantMax( double montantMax);
+    TauxDeIS findByRef(String ref);
+    int deleteByRef(String ref);
+    int save(TauxDeIS tauxDeIS);
 }

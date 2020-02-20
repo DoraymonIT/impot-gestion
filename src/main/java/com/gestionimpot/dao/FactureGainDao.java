@@ -11,13 +11,13 @@ import com.gestionimpot.bean.FactureGain;
 @Repository
 public interface FactureGainDao extends JpaRepository<FactureGain, Long> {
 	
-	FactureGain findByNumeroFacture(Long numeroFacture);
+  FactureGain findByNumeroFacture(Long numeroFacture);
 	
-    List<FactureGain> findAll();
+  List<FactureGain> findAll();
 
-    List<FactureGain> findByDatePaiement(Date datePaiement);
+  List<FactureGain> findByDatePaiement(Date datePaiement);
 
-    List<FactureGain> findByDateFacturation(Date dateFacturation);
+  List<FactureGain> findByDateFacturation(Date dateFacturation);
 
 
 }

@@ -13,27 +13,18 @@ public class FactureGain extends Facture {
 	private Long id;
 	@ManyToOne
 	private Client client;
-	/**
-	 * @return the id
-	 */
+
 	public Long getId() {
 		return id;
 	}
-	/**
-	 * @param id the id to set
-	 */
+
 	public void setId(Long id) {
 		this.id = id;
 	}
-	/**
-	 * @return the client
-	 */
 	public Client getClient() {
 		return client;
 	}
-	/**
-	 * @param client the client to set
-	 */
+
 	public void setClient(Client client) {
 		this.client = client;
 	}

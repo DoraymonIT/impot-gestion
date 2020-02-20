@@ -5,17 +5,19 @@
  */
 package com.gestionimpot.service.facade;
 
-import com.gestionimpot.bean.DeclarationIS;
-import com.gestionimpot.bean.FactureCharge;
-import com.gestionimpot.bean.FactureGain;
-import com.gestionimpot.bean.TauxDeIS;
+import com.gestionimpot.bean.*;
+
 import java.util.List;
 
-/**
- *
- * @author Zakaria
- */
 public interface DeclarationIsService {
+    public DeclarationIS findByReference(String reference);
+
+
+    public List<DeclarationIS> findByTauxDeIS(String tauxDeIS);
+
+    public List<DeclarationIS> findByMontantTva(DeclarationTva montantTva);
+
+    public Long DeleteByRef(String ref);
     
     public List<DeclarationIS> findBySocieteNom(String nom);
 
@@ -29,5 +31,5 @@ public interface DeclarationIsService {
     
     public double montantPenalite(TauxDeIS tauxdeis);
     
-    public List<DeclarationIS> findALL();
+    public List<DeclarationIS> findAll();
 }

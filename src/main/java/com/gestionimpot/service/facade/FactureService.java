@@ -7,16 +7,16 @@ import java.util.Date;
 import java.util.List;
 
 public interface FactureService {
-        Facture findBynNumeroFacture(Long numeroFacture);
+    Facture findBynNumeroFacture(Long numeroFacture);
 
     List<Facture> findAll();
 
-    List<Facture> finfByTva(double tva);
+    List<Facture> findByTva(double tva);
 
     List<Facture> findByDatePaiement(Date datePaiement);
 
     List<Facture> findByDateFacturation(Date dateFacturation);
 
 
-    int save(Facture facture);
+
 }

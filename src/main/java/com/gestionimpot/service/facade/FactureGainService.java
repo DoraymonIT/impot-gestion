@@ -6,12 +6,11 @@ import com.gestionimpot.bean.FactureGain;
 
 public interface FactureGainService {
 	
-	public void save(FactureGain factureGain);
+	public int save(FactureGain factureGain);
 	
 	public List<FactureGain> findAll();
 	
 	public FactureGain findByNumeroFacture(Long numeroFacture);
-	
-	
+
 
 }

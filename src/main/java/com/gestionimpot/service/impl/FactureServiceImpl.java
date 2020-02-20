@@ -15,6 +15,7 @@ public class FactureServiceImpl implements FactureService {
     @Autowired
     private FactureDao factureDao;
 
+
     @Override
     public Facture findBynNumeroFacture(Long numeroFacture) {
         return factureDao.findBynNumeroFacture(numeroFacture);
@@ -26,8 +27,8 @@ public class FactureServiceImpl implements FactureService {
     }
 
     @Override
-    public List<Facture> finfByTva(double tva) {
-        return factureDao.finfByTva(tva);
+    public List<Facture> findByTva(double tva) {
+        return factureDao.findByTva(tva);
     }
 
     @Override
@@ -40,10 +41,5 @@ public class FactureServiceImpl implements FactureService {
         return factureDao.findByDateFacturation(dateFacturation);
     }
 
-    @Override
-    public int save(Facture facture) {
-        // Apres je veux faire les conditions if selon besoin 
-        return 1;
-    }
 
 }

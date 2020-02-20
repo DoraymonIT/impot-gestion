@@ -4,6 +4,7 @@ import com.gestionimpot.bean.DeclarationIR;
 
 import com.gestionimpot.bean.Employe;
 import com.gestionimpot.bean.Societe;
+import com.gestionimpot.bean.TauxDeIR;
 import com.gestionimpot.dao.DeclarationIRDao;
 import com.gestionimpot.dao.EmployeDao;
 import com.gestionimpot.dao.SocieteDao;
@@ -28,6 +29,36 @@ public class DeclarationIRServiceImpl implements DeclarationIRService {
     }
 
     @Override
+    public DeclarationIR findByRef(String ref) {
+        return null;
+    }
+
+    @Override
+    public List<DeclarationIR> findBySociete(Societe societe) {
+        return null;
+    }
+
+    @Override
+    public List<DeclarationIR> findBySalaire(Double salaire) {
+        return null;
+    }
+
+    @Override
+    public List<DeclarationIR> findByMontantDeclaration(Double montantDeclaration) {
+        return null;
+    }
+
+    @Override
+    public List<DeclarationIR> findByTauxDeIR(TauxDeIR tauxDeIR) {
+        return null;
+    }
+
+    @Override
+    public List<DeclarationIR> findByAll() {
+        return null;
+    }
+
+    @Override
     public int save(DeclarationIR declarationIR) {
         Employe foundedEmploye = employeDao.findByCin(declarationIR.getEmploye().getCin());
         Societe foundedSociete = societeDao.findByRef(declarationIR.getSociete().getRef());
@@ -39,6 +70,11 @@ public class DeclarationIRServiceImpl implements DeclarationIRService {
             return  1 ;
 
         }
+    }
+
+    @Override
+    public int removeByRef(String ref) {
+        return 0;
     }
 }
 

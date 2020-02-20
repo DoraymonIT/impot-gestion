@@ -8,51 +8,43 @@ public class DeclarationIS  {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
-        private String reference;
-        
-        @ManyToOne
-        TauxDeIS tauxdeis;
-        
-        
-        @ManyToOne
-        DeclarationTva Montanttva;
-	
-	
+	private String reference;
+	@ManyToOne
+	private TauxDeIS tauxDeIS;
+	@ManyToOne
+	private DeclarationTva declarationTva ;
 	@ManyToOne
 	private Societe societe;
-	/**
-	 * @return the id
-	 */
-	public Long getId() {
-		return id;
-	}
-         public TauxDeIS getTauxdeis() {
-        return tauxdeis;
-    }
 
-    public void setTauxdeis(TauxDeIS tauxdeis) {
-        this.tauxdeis = tauxdeis;
-    }
-	/**
-	 * @param id the id to set
-	 */
-	public void setId(Long id) {
-		this.id = id;
+	public String getReference() {
+		return reference;
 	}
-	/**
-	 * @return the totalCharge
-	 */
-	
-	
+
+	public void setReference(String reference) {
+		this.reference = reference;
+	}
+
+	public TauxDeIS getTauxDeIS() {
+		return tauxDeIS;
+	}
+
+	public void setTauxDeIS(TauxDeIS tauxDeIS) {
+		this.tauxDeIS = tauxDeIS;
+	}
+
+	public DeclarationTva getDeclarationTva() {
+		return declarationTva;
+	}
+
+	public void setDeclarationTva(DeclarationTva declarationTva) {
+		this.declarationTva = declarationTva;
+	}
+
 	public Societe getSociete() {
 		return societe;
 	}
-	/**
-	 * @param societe the societe to set
-	 */
+
 	public void setSociete(Societe societe) {
 		this.societe = societe;
 	}
-
-
 }

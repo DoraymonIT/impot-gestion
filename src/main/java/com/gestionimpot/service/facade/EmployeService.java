@@ -6,17 +6,28 @@ import java.util.List;
 
 public interface EmployeService {
 
-    Employe findBynNumeroEmploye(Long numeroEmploye);
+    public List<Employe> findAll();
 
-    List<Employe> findAll();
+    public List<Employe> findByNom(String nom );
 
-    Employe findByCin(String cin);
+    public List<Employe> findByPrenom(String prenom);
 
-    List<Employe> findBySalaire(double salaire);
+    public List<Employe> findByAdresseHabit(String adresseHabit);
 
-    List<Employe> findBysocieteNom(Societe societe);
+    public List<Employe> findByAdresseMail(String adresseMail);
 
-    int save(Employe employe);
-    
+    public List<Employe> findBySexe(String sexe);
+
+    public List<Employe> findByPrime(double prime);
+
+    public Employe findByCin(String cin);
+
+    public List<Employe> findBySalaire(double salaire);
+
+    public List<Employe> findBySociete(String societe);
+
+    public int save(Employe employe);
+
+    public int deleteByCin(String cin);
     
 }

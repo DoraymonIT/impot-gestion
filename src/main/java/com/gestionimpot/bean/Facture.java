@@ -1,76 +1,78 @@
 package com.gestionimpot.bean;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.io.Serializable;
 import java.util.Date;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
+
 @Entity
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class Facture implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	protected Long id;
-        protected String nomFacture;
-        protected Long numeroFacture;
+	protected String nomFacture;
+	protected Long numeroFacture;
 	@ManyToOne
 	protected Societe societe;
+	@JsonFormat(pattern="yyyy-MM-dd")
 	protected Date dateFacturation;
+	@JsonFormat(pattern="yyyy-MM-dd")
 	protected Date datePaiement;
 	@ManyToOne
 	protected DeclarationTva declarationTva;
-	protected Double montantHT;
-	protected Double montantTTC;
-	protected Double tva;
+	protected   double montantHT;
+	protected   double montantTTC;
+	protected   double tva;
 
 //Nombre de lignes facturées  dg
 
 	public Long getId() {
 		return id;
 	}
-	
+
 	public void setId(Long id) {
 		this.id = id;
 	}
 
-    public String getNomFacture() {
-        return nomFacture;
-    }
+	public String getNomFacture() {
+		return nomFacture;
+	}
 
-    public void setNomFacture(String nomFacture) {
-        this.nomFacture = nomFacture;
-    }
+	public void setNomFacture(String nomFacture) {
+		this.nomFacture = nomFacture;
+	}
 
-    public Long getNumeroFacture() {
-        return numeroFacture;
-    }
+	public Long getNumeroFacture() {
+		return numeroFacture;
+	}
 
-    public void setNumeroFacture(Long numeroFacture) {
-        this.numeroFacture = numeroFacture;
-    }
+	public void setNumeroFacture(Long numeroFacture) {
+		this.numeroFacture = numeroFacture;
+	}
 
-    public Double getMontantHT() {
-        return montantHT;
-    }
+	public   double getMontantHT() {
+		return montantHT;
+	}
 
-    public void setMontantHT(Double montantHT) {
-        this.montantHT = montantHT;
-    }
+	public void setMontantHT(  double montantHT) {
+		this.montantHT = montantHT;
+	}
 
-    public Double getMontantTTC() {
-        return montantTTC;
-    }
+	public   double getMontantTTC() {
+		return montantTTC;
+	}
 
-    public void setMontantTTC(Double montantTTC) {
-        this.montantTTC = montantTTC;
-    }
-	
+	public void setMontantTTC(  double montantTTC) {
+		this.montantTTC = montantTTC;
+	}
+
 	public Societe getSociete() {
 		return societe;
 	}
-	
+
 	public void setSociete(Societe societe) {
 		this.societe = societe;
 	}
@@ -90,7 +92,7 @@ public class Facture implements Serializable{
 	public void setDatePaiement(Date datePaiement) {
 		this.datePaiement = datePaiement;
 	}
-	
+
 	public DeclarationTva getDeclarationTva() {
 		return declarationTva;
 	}
@@ -98,12 +100,12 @@ public class Facture implements Serializable{
 	public void setDeclarationTva(DeclarationTva declarationTva) {
 		this.declarationTva = declarationTva;
 	}
-	
-	public Double getTva() {
+
+	public   double getTva() {
 		return tva;
 	}
-	
-	public void setTva(Double tva) {
+
+	public void setTva(  double tva) {
 		this.tva = tva;
 	}
 

@@ -5,9 +5,11 @@
  */
 package com.gestionimpot.dao;
 
-import com.gestionimpot.bean.DeclarationIS;
+import com.gestionimpot.bean.*;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
 
 /**
  *
@@ -15,7 +17,11 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface DeclarationIsDao extends JpaRepository<DeclarationIS, Long> {
-    DeclarationIS findByReference(String reference);
-    DeclarationIS findBySocieteNom(String nom);
-    
+    public DeclarationIS findByReference(String reference);
+
+
+    public List<DeclarationIS> findAll();
+
+    public Object save(DeclarationIS declarationIS);
+    public Long DeleteByRef(String ref);
 }

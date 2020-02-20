@@ -1,5 +1,7 @@
 package com.gestionimpot.bean;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.util.Date;
 
 import javax.persistence.Entity;
@@ -11,7 +13,15 @@ import javax.persistence.Id;
 public class TauxDeIR {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private  String ref ;
+	private Long id;
+	private String ref ;
+	@JsonFormat(pattern="yyyy-MM-dd")
+	private Date dateDebut;
+	@JsonFormat(pattern="yyyy-MM-dd")
+	private Date dateFin;
+	private  double salaireMin;
+	private  double salaireMax;
+	private  double pourcentage;
 
 	public String getRef() {
 		return ref;
@@ -21,84 +31,43 @@ public class TauxDeIR {
 		this.ref = ref;
 	}
 
-	private Long id;
-	private Date dateDebut;
-	private Date dateFin;
-	private Double salaireMin;
-	private Double salaireMax;
-	private Double pourcentage;
-	/**
-	 * @return the id
-	 */
-	public Long getId() {
-		return id;
-	}
-	/**
-	 * @param id the id to set
-	 */
-	public void setId(Long id) {
-		this.id = id;
-	}
-	/**
-	 * @return the dateDebut
-	 */
 	public Date getDateDebut() {
 		return dateDebut;
 	}
-	/**
-	 * @param dateDebut the dateDebut to set
-	 */
+
 	public void setDateDebut(Date dateDebut) {
 		this.dateDebut = dateDebut;
 	}
-	/**
-	 * @return the dateFin
-	 */
+
 	public Date getDateFin() {
 		return dateFin;
 	}
-	/**
-	 * @param dateFin the dateFin to set
-	 */
+
 	public void setDateFin(Date dateFin) {
 		this.dateFin = dateFin;
 	}
-	/**
-	 * @return the salaireMin
-	 */
-	public Double getSalaireMin() {
+
+	public  double getSalaireMin() {
 		return salaireMin;
 	}
-	/**
-	 * @param salaireMin the salaireMin to set
-	 */
-	public void setSalaireMin(Double salaireMin) {
+
+	public void setSalaireMin( double salaireMin) {
 		this.salaireMin = salaireMin;
 	}
-	/**
-	 * @return the salaireMax
-	 */
-	public Double getSalaireMax() {
+
+	public  double getSalaireMax() {
 		return salaireMax;
 	}
-	/**
-	 * @param salaireMax the salaireMax to set
-	 */
-	public void setSalaireMax(Double salaireMax) {
+
+	public void setSalaireMax( double salaireMax) {
 		this.salaireMax = salaireMax;
 	}
-	/**
-	 * @return the pourcentage
-	 */
-	public Double getPourcentage() {
+
+	public  double getPourcentage() {
 		return pourcentage;
 	}
-	/**
-	 * @param pourcentage the pourcentage to set
-	 */
-	public void setPourcentage(Double pourcentage) {
+
+	public void setPourcentage( double pourcentage) {
 		this.pourcentage = pourcentage;
 	}
-
-
 }

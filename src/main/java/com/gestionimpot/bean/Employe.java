@@ -9,19 +9,19 @@ import javax.persistence.ManyToOne;
 
 @Entity
 public class Employe implements Serializable {
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long id;
-	private String cin;
-	private String nom;
-        private String prenom;
-        private String adresseHabit;
-        private String adresseMail;
-        private String sexe;
-	@ManyToOne
-	private Societe societe;
-	private Double prime;
-	private Double salaire;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+    private String cin;
+    private String nom;
+    private String prenom;
+    private String adresseHabit;
+    private String adresseMail;
+    private String sexe;
+    @ManyToOne
+    private Societe societe;
+    private double prime;
+    private double salaire;
 
     public Long getId() {
         return id;
@@ -102,5 +102,5 @@ public class Employe implements Serializable {
     public void setSalaire(Double salaire) {
         this.salaire = salaire;
     }
-	
+
 }
