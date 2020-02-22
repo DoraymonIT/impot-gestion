@@ -4,10 +4,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.util.Date;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class TauxDeIR {
@@ -15,6 +12,8 @@ public class TauxDeIR {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	private String ref ;
+	@ManyToOne
+	private DeclarationIR declarationIR;
 	@JsonFormat(pattern="yyyy-MM-dd")
 	private Date dateDebut;
 	@JsonFormat(pattern="yyyy-MM-dd")
@@ -69,5 +68,13 @@ public class TauxDeIR {
 
 	public void setPourcentage( double pourcentage) {
 		this.pourcentage = pourcentage;
+	}
+
+	public DeclarationIR getDeclarationIR() {
+		return declarationIR;
+	}
+
+	public void setDeclarationIR(DeclarationIR declarationIR) {
+		this.declarationIR = declarationIR;
 	}
 }

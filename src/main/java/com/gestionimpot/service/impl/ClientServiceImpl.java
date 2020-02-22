@@ -1,23 +1,29 @@
 package com.gestionimpot.service.impl;
 
 import com.gestionimpot.bean.Client;
+import com.gestionimpot.dao.ClientDao;
 import com.gestionimpot.service.facade.ClientService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class ClientServiceImpl implements ClientService {
+    @Autowired
+    ClientDao clientDao ;
     @Override
     public Client findByCin(String cin) {
-        return null;
+        return clientDao.findByCin(cin);
     }
 
     @Override
     public Client findByNom(String nom) {
-        return null;
+        return
+                clientDao.findByNom(nom);
     }
 
     @Override
-    public List<Client> findALL() {
-        return null;
+    public List<Client> findAll() {
+        return clientDao.findAll();
     }
 }

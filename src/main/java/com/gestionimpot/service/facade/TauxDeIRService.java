@@ -7,6 +7,7 @@ import java.util.List;
 
 public interface TauxDeIRService {
     List<TauxDeIR> findAll();
+    TauxDeIR findByDeclarationIR(String declarationIR);
     List<TauxDeIR> findByDateDebut(Date dateDebut);
     List<TauxDeIR> findByDateFin(Date dateFin);
     List<TauxDeIR> findBySalaireMin(Double salaireMin) ;

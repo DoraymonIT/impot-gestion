@@ -11,5 +11,5 @@ import java.util.List;
 public interface ClientDao extends JpaRepository<Client, Long> {
     public  Client findByCin(String cin);
     public  Client findByNom(String nom);
-    public List<Client> findALL();
+    public List<Client> findAll();
 }

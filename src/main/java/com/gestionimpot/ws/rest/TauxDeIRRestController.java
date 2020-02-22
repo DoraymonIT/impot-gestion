@@ -5,6 +5,7 @@ import com.gestionimpot.service.facade.TauxDeIRService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -16,8 +17,40 @@ public class TauxDeIRRestController {
     public List<TauxDeIR> findAll() {
         return tauxDeIRService.findAll();
     }
-    @PostMapping("/")
-    public int save(@RequestBody  TauxDeIR tauxDeIR) {
+    @GetMapping("/declarationIR/{declarationIR}")
+    public TauxDeIR findByDeclarationIR(@PathVariable  String declarationIR) {
+        return tauxDeIRService.findByDeclarationIR(declarationIR);
+    }
+    @GetMapping("/dateDebut/{dateDebut}")
+    public List<TauxDeIR> findByDateDebut(@PathVariable  Date dateDebut) {
+        return tauxDeIRService.findByDateDebut(dateDebut);
+    }
+    @GetMapping("/dateFin/{dateFin}")
+    public List<TauxDeIR> findByDateFin(@PathVariable Date dateFin) {
+        return tauxDeIRService.findByDateFin(dateFin);
+    }
+    @GetMapping("/salaireMin/{salaireMin}")
+    public List<TauxDeIR> findBySalaireMin(@PathVariable Double salaireMin) {
+        return tauxDeIRService.findBySalaireMin(salaireMin);
+    }
+    @GetMapping("/salaireMax/{salaireMax}")
+    public List<TauxDeIR> findBySalaireMax(@PathVariable Double salaireMax) {
+        return tauxDeIRService.findBySalaireMax(salaireMax);
+    }
+    @GetMapping("/pourcentage/{pourcentage}")
+    public List<TauxDeIR> findByPourcentage(@PathVariable Double pourcentage) {
+        return tauxDeIRService.findByPourcentage(pourcentage);
+    }
+    @GetMapping("/ref/{ref}")
+    public TauxDeIR findByRef(@PathVariable String ref) {
+        return tauxDeIRService.findByRef(ref);
+    }
+ @PostMapping("/")
+    public int save(@RequestBody TauxDeIR tauxDeIR) {
         return tauxDeIRService.save(tauxDeIR);
+    }
+@DeleteMapping("/delete/ref")
+    public int deleteByRef(@PathVariable String ref) {
+        return tauxDeIRService.deleteByRef(ref);
     }
 }

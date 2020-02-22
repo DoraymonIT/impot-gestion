@@ -66,7 +66,7 @@ public class EmployeServiceImpl implements EmployeService {
 
     @Override
     public List<Employe> findBySociete(String societe) {
-        return employeDao.findAll().stream().filter(nom -> societe.equals(nom.getSociete().getNom())).collect(Collectors.toList());
+        return employeDao.findAll().stream().filter(s -> societe.equals(s.getSociete().getRef())).collect(Collectors.toList());
     }
 
     @Override
@@ -74,12 +74,8 @@ public class EmployeServiceImpl implements EmployeService {
         Employe foundedEmploye = employeDao.findByCin(employe.getCin());
         Societe foundedSociete = societeDao.findByRef(employe.getSociete().getRef());
 
-        if (foundedEmploye != null) {
-            return -1;
-        }
-        if (foundedSociete == null) {
-            return -2 ;
-        }
+        if (foundedEmploye != null) return -1;
+        if (foundedSociete == null) return -2 ;
         else {
             employeDao.save(employe);
             return 1 ;
@@ -89,9 +85,7 @@ public class EmployeServiceImpl implements EmployeService {
     @Override
     public int deleteByCin(String cin) {
         Employe foundedEmploye = employeDao.findByCin(cin);
-        if (foundedEmploye == null) {
-            return -1;
-        }
+        if (foundedEmploye == null) return -1;
         else{
             employeDao.delete(foundedEmploye);
             return  1 ;

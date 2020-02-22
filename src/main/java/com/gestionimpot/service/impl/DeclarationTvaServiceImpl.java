@@ -25,13 +25,11 @@ public class DeclarationTvaServiceImpl implements DeclarationTvaService {
 
     @Override
     public List<DeclarationTva> findBySociete(String societe) {
-        return declarationTvaDao.findAll().stream()
-                .filter(name -> societe.equals(name.getSociete().getNom()))
-                .collect(Collectors.toList());
+        return  declarationTvaDao.findAll().stream().filter(s->societe.equals(s.getSociete().getRef())).collect(Collectors.toList());
     }
 
     @Override
-    public List<DeclarationTva> findByTotalTva(Double totalTva) {
+    public List<DeclarationTva> findByTotalTva(double totalTva) {
         return declarationTvaDao.findByTotalTva(totalTva);
     }
 
@@ -47,10 +45,11 @@ public class DeclarationTvaServiceImpl implements DeclarationTvaService {
 
     @Override
     public int save(DeclarationTva declarationTva) {
+        DeclarationTva foundedDeclarationTva = declarationTvaDao.findByRef(declarationTva.getRef());
         Societe foundedSociete = societeDao.findByRef(declarationTva.getSociete().getRef()) ;
         if (foundedSociete == null ) return  -1 ;
+        if (foundedDeclarationTva != null) return -2 ;
         else {
-
             declarationTvaDao.save(declarationTva);
             return 1;
         }
@@ -61,7 +60,6 @@ public class DeclarationTvaServiceImpl implements DeclarationTvaService {
         DeclarationTva foundedDeclarationTva = declarationTvaDao.findByRef(ref) ;
         if (foundedDeclarationTva == null ) return  -1 ;
         else {
-
             declarationTvaDao.delete(foundedDeclarationTva);
             return 1;
         }

@@ -15,9 +15,9 @@ public interface SocieteDao extends JpaRepository<Societe, Long>{
     List<Societe> findByAdresse(String adresse);
     List<Societe> findByCapital(Double capital);
     List<Societe> findByNbrEmployes(Double nbrEmployes);
-    List<Societe> findByTypeSociete(String typeSociete);
+
     List<Societe> findAll();
-    Object save(Societe societe);
-    Long deleteByRef(String ref);
+
+
 
 }

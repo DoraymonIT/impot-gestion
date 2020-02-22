@@ -8,12 +8,12 @@ import com.gestionimpot.bean.TauxDeIR;
 import java.util.List;
 
 public interface DeclarationIRService {
-    public List<DeclarationIR> findByEmploye(Employe employe);
+    public List<DeclarationIR> findByEmploye(String employe);
     public DeclarationIR findByRef(String ref);
-    public List<DeclarationIR> findBySociete(Societe societe);
+    public List<DeclarationIR> findBySociete(String societe);
     public List<DeclarationIR> findBySalaire(Double salaire);
     public List<DeclarationIR> findByMontantDeclaration(Double montantDeclaration );
-    public List<DeclarationIR> findByTauxDeIR(TauxDeIR tauxDeIR);
+    public List<DeclarationIR> findByTauxDeIR(String tauxDeIR);
     public List<DeclarationIR> findByAll();
     public int save(DeclarationIR declarationIR);
     public int removeByRef(String ref);

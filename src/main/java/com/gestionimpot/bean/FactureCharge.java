@@ -12,9 +12,17 @@ public class FactureCharge extends Facture {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
+	private String ref ;
 	@ManyToOne
 	private Fournisseur fournisseur;
 
+	public String getRef() {
+		return ref;
+	}
+
+	public void setRef(String ref) {
+		this.ref = ref;
+	}
 
 	public Long getId() {
 		return id;

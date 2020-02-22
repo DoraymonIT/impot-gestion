@@ -18,7 +18,7 @@ public class FactureServiceImpl implements FactureService {
 
     @Override
     public Facture findBynNumeroFacture(Long numeroFacture) {
-        return factureDao.findBynNumeroFacture(numeroFacture);
+        return factureDao.findByNumeroFacture(numeroFacture);
     }
 
     @Override

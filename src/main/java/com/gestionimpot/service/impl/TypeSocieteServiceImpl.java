@@ -13,13 +13,36 @@ import com.gestionimpot.service.facade.TypeSocieteService;
 public class TypeSocieteServiceImpl implements TypeSocieteService{
     @Autowired
     private TypeSocieteDao typeSocieteDao;
-    @Override
-    public int save(TypeSociete typeSociete) {
-        typeSocieteDao.save(typeSociete);
-        return 1;
-    }
+
+
     @Override
     public TypeSociete findByLibelle(String libelle) {
         return typeSocieteDao.findByLibelle(libelle);
+    }
+
+    @Override
+    public List<TypeSociete> findAll() {
+        return typeSocieteDao.findAll();
+    }
+
+    @Override
+    public int deleteByLibelle(String libelle) {
+        TypeSociete foundedTypeSociete = typeSocieteDao.findByLibelle(libelle);
+        if (foundedTypeSociete == null) return -1;
+        else{
+            typeSocieteDao.delete(foundedTypeSociete);
+            return 1;
+        }
+
+    }
+
+    @Override
+    public int save(TypeSociete typeSociete) {
+        TypeSociete foundedTypeSociete = typeSocieteDao.findByLibelle(typeSociete.getLibelle());
+        if (foundedTypeSociete != null) return -1;
+        else  {
+            typeSocieteDao.save(typeSociete);
+            return 1;
+        }
     }
 }

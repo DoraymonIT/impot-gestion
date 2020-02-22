@@ -9,6 +9,6 @@ import java.util.List;
 
 @Repository
 public interface FactureChargeDao extends JpaRepository<FactureCharge , Long> {
-    public List<FactureCharge> findByFournisseur(Fournisseur fournisseur);
-    public  FactureCharge findByNumeroFacture(Long numeroFacture );
+
+    public  FactureCharge findByRef(String ref );
 }

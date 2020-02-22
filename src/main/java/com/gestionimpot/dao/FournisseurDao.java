@@ -12,6 +12,5 @@ public interface FournisseurDao extends JpaRepository<Fournisseur, Long>{
 	public Fournisseur findByCin(String cin);
 	public List<Fournisseur> findByNom(String nom );
 	public List<Fournisseur>findAll();
-	public Object save(Fournisseur fournisseur);
-	public Long deleteByCin(String cin);
+
 }

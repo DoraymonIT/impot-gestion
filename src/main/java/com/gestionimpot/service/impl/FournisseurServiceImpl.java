@@ -7,7 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import com.gestionimpot.bean.Fournisseur;
 import com.gestionimpot.dao.FournisseurDao;
 import com.gestionimpot.service.facade.FournisseurService;
+import org.springframework.stereotype.Service;
 
+@Service
 public class FournisseurServiceImpl implements FournisseurService{
     @Autowired
     FournisseurDao fournisseurDao;

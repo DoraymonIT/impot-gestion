@@ -19,21 +19,16 @@ public class FactureGainRestController {
 	
 	@Autowired
 	private FactureGainService factureGainService;
-	
 	@PostMapping("/")
-	public void save(@RequestBody FactureGain factureGain) {
-		factureGainService.save(factureGain);
+	public int save(@RequestBody  FactureGain factureGain) {
+		return factureGainService.save(factureGain);
 	}
-	
 	@GetMapping("/")
-	public List<FactureGain> findAll(){
+	public List<FactureGain> findAll() {
 		return factureGainService.findAll();
 	}
-	
 	@GetMapping("/numeroFacture/{numeroFacture}")
-	public FactureGain findBynumeroFacture(@PathVariable Long numeroFacture) {
+	public FactureGain findByNumeroFacture(Long numeroFacture) {
 		return factureGainService.findByNumeroFacture(numeroFacture);
 	}
-	
-
 }

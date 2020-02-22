@@ -4,7 +4,6 @@ import com.gestionimpot.bean.DeclarationIR;
 
 import com.gestionimpot.bean.Employe;
 import com.gestionimpot.bean.Societe;
-import com.gestionimpot.bean.TauxDeIR;
 import com.gestionimpot.dao.DeclarationIRDao;
 import com.gestionimpot.dao.EmployeDao;
 import com.gestionimpot.dao.SocieteDao;
@@ -13,6 +12,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
+
 
 @Service
 public class DeclarationIRServiceImpl implements DeclarationIRService {
@@ -24,57 +25,62 @@ public class DeclarationIRServiceImpl implements DeclarationIRService {
     SocieteDao societeDao ;
 
     @Override
-    public List<DeclarationIR> findByEmploye(Employe employe) {
-        return declarationIRDao.findByEmploye(employe);
+    public List<DeclarationIR> findByEmploye(String employe) {
+        return declarationIRDao.findAll().stream().filter(t -> employe.equals(t.getEmploye().getCin())).collect(Collectors.toList());
     }
 
     @Override
     public DeclarationIR findByRef(String ref) {
-        return null;
+        return declarationIRDao.findByRef(ref);
     }
 
     @Override
-    public List<DeclarationIR> findBySociete(Societe societe) {
-        return null;
+    public List<DeclarationIR> findBySociete(String societe) {
+        return declarationIRDao.findAll().stream().filter(t -> societe.equals(t.getSociete().getRef())).collect(Collectors.toList());
     }
 
     @Override
     public List<DeclarationIR> findBySalaire(Double salaire) {
-        return null;
+        return declarationIRDao.findBySalaire(salaire) ;
     }
 
     @Override
     public List<DeclarationIR> findByMontantDeclaration(Double montantDeclaration) {
-        return null;
+        return declarationIRDao.findByMontantDeclaration(montantDeclaration);
     }
 
-    @Override
-    public List<DeclarationIR> findByTauxDeIR(TauxDeIR tauxDeIR) {
-        return null;
+  @Override
+    public List<DeclarationIR> findByTauxDeIR(String tauxDeIR) {
+        return declarationIRDao.findAll().stream().filter(t -> tauxDeIR.equals(t.getTauxDeIR().getRef())).collect(Collectors.toList());
     }
 
     @Override
     public List<DeclarationIR> findByAll() {
-        return null;
+        return declarationIRDao.findAll();
     }
 
     @Override
     public int save(DeclarationIR declarationIR) {
+        DeclarationIR foundedDeclarationIR = declarationIRDao.findByRef(declarationIR.getRef());
         Employe foundedEmploye = employeDao.findByCin(declarationIR.getEmploye().getCin());
         Societe foundedSociete = societeDao.findByRef(declarationIR.getSociete().getRef());
         if(foundedEmploye == null ) return -1 ;
         else if (foundedSociete == null ) return  -2 ;
+        else if (foundedDeclarationIR == null) return -3;
         else {
             declarationIRDao.save(declarationIR);
-
             return  1 ;
-
         }
     }
 
     @Override
     public int removeByRef(String ref) {
-        return 0;
+        DeclarationIR foundedDeclarationIR = declarationIRDao.findByRef(ref);
+        if (foundedDeclarationIR == null) return -1;
+        else {
+            declarationIRDao.delete(foundedDeclarationIR);
+            return 1;
+        }
     }
 }
 
