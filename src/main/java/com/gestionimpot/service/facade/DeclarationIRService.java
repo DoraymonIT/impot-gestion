@@ -14,7 +14,7 @@ public interface DeclarationIRService {
     public List<DeclarationIR> findBySalaire(Double salaire);
     public List<DeclarationIR> findByMontantDeclaration(Double montantDeclaration );
     public List<DeclarationIR> findByTauxDeIR(String tauxDeIR);
-    public List<DeclarationIR> findByAll();
+    public List<DeclarationIR> findAll();
     public int save(DeclarationIR declarationIR);
     public int removeByRef(String ref);
 

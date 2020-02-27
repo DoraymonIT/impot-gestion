@@ -15,16 +15,13 @@ import java.util.*;
 public class TauxDeISRestController {
     @Autowired
     TauxDeISService tauxDeISService ;
-    @GetMapping("/pourcentageRetard/{dateFacturation}/{datePaiement}")
-    public double pourcentageRetard(@PathVariable LocalDate dateFacturation, @PathVariable LocalDate datePaiement) {
-        return tauxDeISService.pourcentageRetard(dateFacturation, datePaiement);
-    }
+
     @GetMapping("/declarationIS/{declarationIS}")
     public TauxDeIS findByDeclarationIS(@PathVariable  String declarationIS) {
         return tauxDeISService.findByDeclarationIS(declarationIS);
     }
     @GetMapping("/dateDebut/{dateDebut}")
-    public List<TauxDeIS> findByDateDebut(@PathVariable  Date dateDebut) {
+        public List<TauxDeIS> findByDateDebut(@PathVariable  Date dateDebut) {
         return tauxDeISService.findByDateDebut(dateDebut);
     }
     @GetMapping("/")

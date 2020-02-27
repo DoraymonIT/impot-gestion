@@ -26,4 +26,15 @@ public class ClientServiceImpl implements ClientService {
     public List<Client> findAll() {
         return clientDao.findAll();
     }
+
+    @Override
+    public int save(Client client) {
+        Client foundedClient = clientDao.findByCin(client.getCin());
+        if (foundedClient != null) return -1;
+        else{
+            clientDao.save(client);
+            return 1 ;
+        }
+
+    }
 }

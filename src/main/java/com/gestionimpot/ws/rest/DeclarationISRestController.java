@@ -27,10 +27,6 @@ public class DeclarationISRestController {
         return declarationISService.findByMontantTva(montantTva);
     }
 
-    @DeleteMapping("/DeleteByRef/{ref}")
-    public int DeleteByRef(@PathVariable  String ref) {
-        return declarationISService.DeleteByRef(ref);
-    }
 
     @GetMapping("/societe/{ref}")
     public List<DeclarationIS> findBySocieteRef(@PathVariable  String ref) {
@@ -44,4 +40,9 @@ public class DeclarationISRestController {
     public List<DeclarationIS> findAll() {
         return declarationISService.findAll();
     }
+    @DeleteMapping("/DeleteByRef/{ref}")
+    public int DeleteByRef(@PathVariable  String ref) {
+        return declarationISService.DeleteByRef(ref);
+    }
+
 }

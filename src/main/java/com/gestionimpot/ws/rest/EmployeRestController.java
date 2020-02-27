@@ -58,7 +58,7 @@ public class EmployeRestController {
     public int save(@RequestBody  Employe employe) {
         return employeService.save(employe);
     }
-    @DeleteMapping("delete/{cin}")
+    @DeleteMapping("/delete/{cin}")
     public int deleteByCin(@PathVariable  String cin) {
         return employeService.deleteByCin(cin);
     }

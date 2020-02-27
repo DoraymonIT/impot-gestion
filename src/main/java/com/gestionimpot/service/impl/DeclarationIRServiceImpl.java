@@ -55,7 +55,7 @@ public class DeclarationIRServiceImpl implements DeclarationIRService {
     }
 
     @Override
-    public List<DeclarationIR> findByAll() {
+    public List<DeclarationIR> findAll() {
         return declarationIRDao.findAll();
     }
 
@@ -66,7 +66,7 @@ public class DeclarationIRServiceImpl implements DeclarationIRService {
         Societe foundedSociete = societeDao.findByRef(declarationIR.getSociete().getRef());
         if(foundedEmploye == null ) return -1 ;
         else if (foundedSociete == null ) return  -2 ;
-        else if (foundedDeclarationIR == null) return -3;
+        else if (foundedDeclarationIR != null) return -3;
         else {
             declarationIRDao.save(declarationIR);
             return  1 ;

@@ -43,8 +43,8 @@ public class DeclarationIRRestController {
         return declarationIRService.findByMontantDeclaration(montantDeclaration);
     }
     @GetMapping("/")
-    public List<DeclarationIR> findByAll() {
-        return declarationIRService.findByAll();
+    public List<DeclarationIR> findAll() {
+        return declarationIRService.findAll();
     }
     @PostMapping("/")
     public int save(@RequestBody  DeclarationIR declarationIR) {
