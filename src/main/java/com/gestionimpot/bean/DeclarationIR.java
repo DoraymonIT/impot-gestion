@@ -9,17 +9,44 @@ public class DeclarationIR   {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	private  String ref ;
+	private String emplyeRef ;
 	@ManyToOne
 	private Employe employe;
+	private String societeRef ;
 	@ManyToOne
 	private Societe societe;
 	private Double salaire;
 	private Double montantDeclaration;
+	private String tauxDeIrRef ;
 	@ManyToOne
 	private TauxDeIR tauxDeIR;
 
 	public Long getId() {
 		return id;
+	}
+
+	public String getEmplyeRef() {
+		return emplyeRef;
+	}
+
+	public void setEmplyeRef(String emplyeRef) {
+		this.emplyeRef = emplyeRef;
+	}
+
+	public String getSocieteRef() {
+		return societeRef;
+	}
+
+	public void setSocieteRef(String societeRef) {
+		this.societeRef = societeRef;
+	}
+
+	public String getTauxDeIrRef() {
+		return tauxDeIrRef;
+	}
+
+	public void setTauxDeIrRef(String tauxDeIrRef) {
+		this.tauxDeIrRef = tauxDeIrRef;
 	}
 
 	public void setId(Long id) {

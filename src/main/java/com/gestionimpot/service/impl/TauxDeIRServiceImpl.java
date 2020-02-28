@@ -20,10 +20,7 @@ public class TauxDeIRServiceImpl implements TauxDeIRService {
         return tauxDeIRDao.findAll();
     }
 
-    @Override
-    public TauxDeIR findByDeclarationIR(String declarationIR) {
-        return tauxDeIRDao.findAll().stream().filter(t -> declarationIR.equals(t.getDeclarationIR().getRef())).collect(Collectors.toList()).get(0);
-    }
+
 
     @Override
     public List<TauxDeIR> findByDateDebut(Date dateDebut) {
@@ -58,7 +55,8 @@ public class TauxDeIRServiceImpl implements TauxDeIRService {
     @Override
     public int save(TauxDeIR tauxDeIR) {
         TauxDeIR foundedTauxDeIR = tauxDeIRDao.findByRef(tauxDeIR.getRef());
-
+        if(tauxDeIR.getSalaireMax()< tauxDeIR.getSalaireMin()) return  -2 ;
+        else if (tauxDeIR.getDateDebut().compareTo(tauxDeIR.getDateFin()) > 0)  return -3 ;
         if (foundedTauxDeIR != null) {
             return -1;
         }

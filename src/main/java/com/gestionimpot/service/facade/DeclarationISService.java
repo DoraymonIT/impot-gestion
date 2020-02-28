@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface DeclarationISService {
     public DeclarationIS findByReference(String reference);
-    public List<DeclarationIS> findByTauxDeIS(String tauxDeIS);
+    public List<DeclarationIS> findByTauxDeISRef(String tauxDeIS);
     public List<DeclarationIS> findByMontantTva(double montantTva);
     public int DeleteByRef(String ref);
     public List<DeclarationIS> findBySocieteRef(String ref);
@@ -18,4 +18,6 @@ public interface DeclarationISService {
     public double beneficeNet(List<FactureCharge> facturecharge,List<FactureGain> facturegain);
     public double montantPenalite(TauxDeIS tauxdeis);
     public List<DeclarationIS> findAll();
+    public List<DeclarationIS> findByDeclarationTvaRef(String declarationTvaRef );
+
 }

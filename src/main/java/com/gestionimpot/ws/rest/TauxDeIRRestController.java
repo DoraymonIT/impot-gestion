@@ -17,10 +17,6 @@ public class TauxDeIRRestController {
     public List<TauxDeIR> findAll() {
         return tauxDeIRService.findAll();
     }
-    @GetMapping("/declarationIR/{declarationIR}")
-    public TauxDeIR findByDeclarationIR(@PathVariable  String declarationIR) {
-        return tauxDeIRService.findByDeclarationIR(declarationIR);
-    }
     @GetMapping("/dateDebut/{dateDebut}")
     public List<TauxDeIR> findByDateDebut(@PathVariable  Date dateDebut) {
         return tauxDeIRService.findByDateDebut(dateDebut);

@@ -33,6 +33,7 @@ public class FournisseurServiceImpl implements FournisseurService{
 	@Override
 	public int save(Fournisseur fournisseur) {
 		Fournisseur foundedFourniseur = fournisseurDao.findByCin(fournisseur.getCin());
+
 		if (foundedFourniseur != null) return -1;
 		else{
 			fournisseurDao.save(fournisseur);

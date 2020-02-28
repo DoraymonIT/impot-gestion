@@ -19,7 +19,7 @@ public class DeclarationISRestController {
 
     @GetMapping("/tauxDeIS/{tauxDeIS}")
     public List<DeclarationIS> findByTauxDeIS(@PathVariable String tauxDeIS) {
-        return declarationISService.findByTauxDeIS(tauxDeIS);
+        return declarationISService.findByTauxDeISRef(tauxDeIS);
     }
 
     @GetMapping("/montantTva/{montantTva}")

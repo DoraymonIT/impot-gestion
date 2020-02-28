@@ -35,12 +35,12 @@ public class DeclarationTVARestController {
     }
 
     @GetMapping("/societe/{societe}")
-    public List<DeclarationTva> findBySociete(@PathVariable String societe) {
-        return declarationTvaService.findBySociete(societe);
+    public List<DeclarationTva> findBySocieteRef(@PathVariable String societeRef) {
+        return declarationTvaService.findBySocieteRef(societeRef);
     }
     @PostMapping("/")
     public int save(@RequestBody DeclarationTva declarationTva) {
-        return declarationTvaService.save(declarationTva);
+        return declarationTvaService.save(declarationTva , declarationTva.getFactureGains() , declarationTva.getFactureCharges());
     }
     @DeleteMapping("/delete/{ref}")
     public int DeleteByRef(@PathVariable  String ref) {

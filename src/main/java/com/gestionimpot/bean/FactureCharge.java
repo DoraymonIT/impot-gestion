@@ -13,6 +13,16 @@ public class FactureCharge extends Facture {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	private String ref ;
+
+	public String getFournisseurCne() {
+		return fournisseurCne;
+	}
+
+	public void setFournisseurCne(String fournisseurCne) {
+		this.fournisseurCne = fournisseurCne;
+	}
+
+	private String fournisseurCne ;
 	@ManyToOne
 	private Fournisseur fournisseur;
 

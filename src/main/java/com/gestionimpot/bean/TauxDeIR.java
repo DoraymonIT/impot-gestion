@@ -12,8 +12,7 @@ public class TauxDeIR {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	private String ref ;
-	@ManyToOne
-	private DeclarationIR declarationIR;
+
 	@JsonFormat(pattern="yyyy-MM-dd")
 	private Date dateDebut;
 	@JsonFormat(pattern="yyyy-MM-dd")
@@ -70,11 +69,4 @@ public class TauxDeIR {
 		this.pourcentage = pourcentage;
 	}
 
-	public DeclarationIR getDeclarationIR() {
-		return declarationIR;
-	}
-
-	public void setDeclarationIR(DeclarationIR declarationIR) {
-		this.declarationIR = declarationIR;
-	}
 }

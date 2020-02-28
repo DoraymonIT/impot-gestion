@@ -25,7 +25,7 @@ public class TypeSocieteRestController {
         return typeSocieteService.findAll();
     }
     @DeleteMapping("/delete/{libelle}")
-    public int deleteByLibelle(String libelle) {
+    public int deleteByLibelle(@PathVariable  String libelle) {
         return typeSocieteService.deleteByLibelle(libelle);
     }
     @PostMapping("/")

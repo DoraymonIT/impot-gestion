@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 
 
 @Repository
-public  interface TauxDeIsDao extends JpaRepository<TauxDeIS , Long> {
+public  interface TauxDeISDao extends JpaRepository<TauxDeIS , Long> {
 
     List<TauxDeIS> findByDateDebut(Date dateDebut);
     List<TauxDeIS> findAll();

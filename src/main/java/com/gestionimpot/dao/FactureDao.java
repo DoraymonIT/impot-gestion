@@ -17,9 +17,6 @@ public interface FactureDao extends JpaRepository<Facture, Long> {
 
      List<Facture> findByNomFacture(String nomFacture);
 
-
-
-
      List<Facture> findByMontantHT(double montantHT);
 
      List<Facture> findByMontantTTC(double montantTTC);

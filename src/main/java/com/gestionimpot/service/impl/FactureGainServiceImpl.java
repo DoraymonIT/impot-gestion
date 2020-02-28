@@ -20,14 +20,11 @@ public class FactureGainServiceImpl implements FactureGainService {
 	@Override
 	public int save(FactureGain factureGain) {
 		FactureGain foundedFactureGain = factureGainDao.findByNumeroFacture(factureGain.getNumeroFacture());
-		Client foundedClient = clientDao.findByCin(factureGain.getClient().getCin());
-		if (foundedFactureGain != null) {
-			return -1;
-		}
-		if (foundedClient == null) {
-			return -2 ;
-		}
+		Client foundedClient = clientDao.findByCin(factureGain.getClientCne());
+		if (foundedFactureGain != null) return -1;
+		if (foundedClient == null) return -2 ;
 		else {
+			factureGain.setClient(foundedClient);
 			factureGainDao.save(factureGain);
 			return 1;
 		}
@@ -43,7 +40,21 @@ public class FactureGainServiceImpl implements FactureGainService {
 		return factureGainDao.findByNumeroFacture(numeroFacture);
 	}
 
+	@Override
+	public List<FactureGain> findByClientCne(String clientCne) {
+		return factureGainDao.findByClientCne(clientCne);
+	}
 
+	@Override
+	public int deleteByRef(Long ref) {
+		FactureGain foundedFactureGain = factureGainDao.findByNumeroFacture(ref);
+		if (foundedFactureGain == null) return -1 ;
+		else{
+			factureGainDao.delete(foundedFactureGain);
+			return 0;
+		}
+	}
 
 
 }
+

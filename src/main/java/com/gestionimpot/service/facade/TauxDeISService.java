@@ -11,7 +11,6 @@ import java.util.List;
 public interface TauxDeISService {
 
     double pourcentageRetard(LocalDate dateFacturation, LocalDate datePaiement) ;
-    TauxDeIS findByDeclarationIS(String declarationIS);
     List<TauxDeIS> findByDateDebut(Date dateDebut);
     List<TauxDeIS> findAll();
     List<TauxDeIS> findByDateFin(Date dateFin);

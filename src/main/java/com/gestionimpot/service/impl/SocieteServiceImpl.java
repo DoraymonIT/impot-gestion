@@ -58,7 +58,7 @@ public class SocieteServiceImpl implements SocieteService {
     @Override
     public int save(Societe societe) {
        Societe foundedSociete = societeDao.findByRef(societe.getRef());
-       TypeSociete foundedTypeSociete = typeSocieteDao.findByLibelle(societe.getTypeSociete().getLibelle());
+       TypeSociete foundedTypeSociete = typeSocieteDao.findByLibelle(societe.getTypeSocieteRef());
         if (foundedTypeSociete == null) {
             return -2;
         }
@@ -66,6 +66,7 @@ public class SocieteServiceImpl implements SocieteService {
             return -1;
         }
         else {
+            societe.setTypeSociete(foundedTypeSociete);
             societeDao.save(societe);
             return 1;
         }

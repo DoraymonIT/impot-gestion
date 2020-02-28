@@ -16,11 +16,20 @@ public class Societe {
 	private String adresse;
 	private  double nbrEmployes;
 	private  double capital;
+	private String typeSocieteRef ;
 	@ManyToOne
 	private TypeSociete typeSociete;
 
 	public String getNom() {
 		return nom;
+	}
+
+	public String getTypeSocieteRef() {
+		return typeSocieteRef;
+	}
+
+	public void setTypeSocieteRef(String typeSocieteRef) {
+		this.typeSocieteRef = typeSocieteRef;
 	}
 
 	public void setNom(String nom) {

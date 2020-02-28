@@ -18,6 +18,7 @@ public class Employe implements Serializable {
     private String adresseHabit;
     private String adresseMail;
     private String sexe;
+    private String societeRef ;
     @ManyToOne
     private Societe societe;
     private double prime;
@@ -53,6 +54,22 @@ public class Employe implements Serializable {
 
     public void setNom(String nom) {
         this.nom = nom;
+    }
+
+    public String getSocieteRef() {
+        return societeRef;
+    }
+
+    public void setSocieteRef(String societeRef) {
+        this.societeRef = societeRef;
+    }
+
+    public void setPrime(double prime) {
+        this.prime = prime;
+    }
+
+    public void setSalaire(double salaire) {
+        this.salaire = salaire;
     }
 
     public String getPrenom() {

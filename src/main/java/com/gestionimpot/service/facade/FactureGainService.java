@@ -12,5 +12,9 @@ public interface FactureGainService {
 	
 	public FactureGain findByNumeroFacture(Long numeroFacture);
 
+	public List<FactureGain> findByClientCne(String clientCne);
+
+	public int deleteByRef(Long ref);
+
 
 }

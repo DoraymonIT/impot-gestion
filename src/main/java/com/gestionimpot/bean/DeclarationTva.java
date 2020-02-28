@@ -11,6 +11,7 @@ public class DeclarationTva {
 	private Long id;
 	private Double totalTva;
 	private String ref ;
+	private String societeRef ;
 	@ManyToOne
 	private Societe societe;
 	private int annee;
@@ -25,6 +26,15 @@ public class DeclarationTva {
 
 	public void setTotalTva(Double totalTva) {
 		this.totalTva = totalTva;
+	}
+
+	public String getSocieteRef() {
+
+		return societeRef;
+	}
+
+	public void setSocieteRef(String societeRef) {
+		this.societeRef = societeRef;
 	}
 
 	public String getRef() {

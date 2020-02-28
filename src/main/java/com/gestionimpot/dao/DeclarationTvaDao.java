@@ -13,6 +13,8 @@ public interface DeclarationTvaDao extends JpaRepository<DeclarationTva , Long> 
     public List<DeclarationTva> findByTotalTva(double totalTva);
     public List<DeclarationTva> findByAnnee(int annee);
     public List<DeclarationTva> findAll();
+    public List<DeclarationTva> findBySocieteRef(String societeRef);
+
 
 
 }

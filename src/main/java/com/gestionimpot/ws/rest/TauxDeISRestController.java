@@ -15,13 +15,8 @@ import java.util.*;
 public class TauxDeISRestController {
     @Autowired
     TauxDeISService tauxDeISService ;
-
-    @GetMapping("/declarationIS/{declarationIS}")
-    public TauxDeIS findByDeclarationIS(@PathVariable  String declarationIS) {
-        return tauxDeISService.findByDeclarationIS(declarationIS);
-    }
     @GetMapping("/dateDebut/{dateDebut}")
-        public List<TauxDeIS> findByDateDebut(@PathVariable  Date dateDebut) {
+    public List<TauxDeIS> findByDateDebut(@PathVariable  Date dateDebut) {
         return tauxDeISService.findByDateDebut(dateDebut);
     }
     @GetMapping("/")

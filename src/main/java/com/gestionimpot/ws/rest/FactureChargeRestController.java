@@ -21,8 +21,17 @@ public class FactureChargeRestController {
     public FactureCharge findByRef(@PathVariable  String ref) {
         return factureChargeService.findByRef(ref);
     }
-    @GetMapping("/fournisseur/{fournisseur}")
-    public List<FactureCharge> findByFournisseur(@PathVariable  String fournisseur) {
-        return factureChargeService.findByFournisseur(fournisseur);
+
+    @GetMapping("/fournisseurCne/{fournisseurCne}")
+    public List<FactureCharge> findByFournisseurCne(@PathVariable  String fournisseurCne) {
+        return factureChargeService.findByFournisseurCne(fournisseurCne);
+    }
+    @PostMapping("/")
+    public int save(@RequestBody  FactureCharge factureCharge) {
+        return factureChargeService.save(factureCharge);
+    }
+    @DeleteMapping("/ref/{ref}")
+    public int deleteByRef(@PathVariable  String ref) {
+        return factureChargeService.deleteByRef(ref);
     }
 }

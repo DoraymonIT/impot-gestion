@@ -16,8 +16,7 @@ public class TauxDeIS {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	private String ref ;
-	@ManyToOne
-	private DeclarationIS declarationIS;
+
 	@JsonFormat(pattern="yyyy-MM-dd")
 	private Date dateDebut;
 	@JsonFormat(pattern="yyyy-MM-dd")
@@ -31,14 +30,6 @@ public class TauxDeIS {
 
 	public void setRef(String ref) {
 		this.ref = ref;
-	}
-
-	public DeclarationIS getDeclarationIS() {
-		return declarationIS;
-	}
-
-	public void setDeclarationIS(DeclarationIS declarationIS) {
-		this.declarationIS = declarationIS;
 	}
 
 	public Date getDateDebut() {

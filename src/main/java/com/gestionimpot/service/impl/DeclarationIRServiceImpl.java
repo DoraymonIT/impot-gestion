@@ -4,9 +4,11 @@ import com.gestionimpot.bean.DeclarationIR;
 
 import com.gestionimpot.bean.Employe;
 import com.gestionimpot.bean.Societe;
+import com.gestionimpot.bean.TauxDeIR;
 import com.gestionimpot.dao.DeclarationIRDao;
 import com.gestionimpot.dao.EmployeDao;
 import com.gestionimpot.dao.SocieteDao;
+import com.gestionimpot.dao.TauxDeIRDao;
 import com.gestionimpot.service.facade.DeclarationIRService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -23,6 +25,8 @@ public class DeclarationIRServiceImpl implements DeclarationIRService {
     EmployeDao employeDao ;
     @Autowired
     SocieteDao societeDao ;
+    @Autowired
+    TauxDeIRDao tauxDeIRDao ;
 
     @Override
     public List<DeclarationIR> findByEmploye(String employe) {
@@ -49,7 +53,7 @@ public class DeclarationIRServiceImpl implements DeclarationIRService {
         return declarationIRDao.findByMontantDeclaration(montantDeclaration);
     }
 
-  @Override
+    @Override
     public List<DeclarationIR> findByTauxDeIR(String tauxDeIR) {
         return declarationIRDao.findAll().stream().filter(t -> tauxDeIR.equals(t.getTauxDeIR().getRef())).collect(Collectors.toList());
     }
@@ -62,12 +66,17 @@ public class DeclarationIRServiceImpl implements DeclarationIRService {
     @Override
     public int save(DeclarationIR declarationIR) {
         DeclarationIR foundedDeclarationIR = declarationIRDao.findByRef(declarationIR.getRef());
-        Employe foundedEmploye = employeDao.findByCin(declarationIR.getEmploye().getCin());
-        Societe foundedSociete = societeDao.findByRef(declarationIR.getSociete().getRef());
+        Employe foundedEmploye = employeDao.findByCin(declarationIR.getEmplyeRef());
+        Societe foundedSociete = societeDao.findByRef(declarationIR.getSocieteRef());
+        TauxDeIR foundedTauxDeIR = tauxDeIRDao.findByRef(declarationIR.getTauxDeIrRef());
         if(foundedEmploye == null ) return -1 ;
         else if (foundedSociete == null ) return  -2 ;
         else if (foundedDeclarationIR != null) return -3;
+        else if (foundedTauxDeIR == null) return -4 ;
         else {
+            declarationIR.setEmploye(foundedEmploye);
+            declarationIR.setSociete(foundedSociete);
+            declarationIR.setTauxDeIR(foundedTauxDeIR);
             declarationIRDao.save(declarationIR);
             return  1 ;
         }

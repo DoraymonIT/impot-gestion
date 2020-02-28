@@ -1,18 +1,12 @@
 
 package com.gestionimpot.service.impl;
 
-
-import com.gestionimpot.bean.DeclarationIS;
 import com.gestionimpot.bean.TauxDeIS;
-
-import com.gestionimpot.dao.DeclarationIsDao;
-import com.gestionimpot.dao.TauxDeIsDao;
+import com.gestionimpot.dao.DeclarationISDao;
+import com.gestionimpot.dao.TauxDeISDao;
 import com.gestionimpot.service.facade.TauxDeISService;
-
 import java.util.Date;
 import java.util.List;
-import java.util.stream.Collectors;
-
 import org.joda.time.LocalDate;
 import org.joda.time.Months;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,9 +17,9 @@ import org.springframework.stereotype.Service;
 public class TauxDeISServiceImpl implements TauxDeISService {
 
     @Autowired
-    TauxDeIsDao tauxDeIsDao;
+    TauxDeISDao tauxDeIsDao;
     @Autowired
-    DeclarationIsDao declarationIsDao ;
+    DeclarationISDao declarationIsDao ;
     @Override
     public double pourcentageRetard(LocalDate dateFacturation, LocalDate datePaiement) {
         int months = Months.monthsBetween(datePaiement , dateFacturation ).getMonths();
@@ -33,12 +27,6 @@ public class TauxDeISServiceImpl implements TauxDeISService {
         else return 0;
     }
 
-
-
-    @Override
-    public TauxDeIS findByDeclarationIS(String declarationIS) {
-        return tauxDeIsDao.findAll().stream().filter(t -> declarationIS.equals(t.getDeclarationIS().getReference())).collect(Collectors.toList()).get(0);
-   }
 
     @Override
     public List<TauxDeIS> findByDateDebut(Date dateDebut) {
@@ -83,9 +71,7 @@ public class TauxDeISServiceImpl implements TauxDeISService {
     @Override
     public int save(TauxDeIS tauxDeIS) {
         TauxDeIS foundedTauxDeIS = tauxDeIsDao.findByRef(tauxDeIS.getRef());
-        DeclarationIS foundedDeclarationIS = declarationIsDao.findByReference(tauxDeIS.getDeclarationIS().getReference());
         if (foundedTauxDeIS != null) return -1;
-        if (foundedDeclarationIS == null) return  -2;
         else { tauxDeIsDao.save(tauxDeIS);
         return 1;}
     }

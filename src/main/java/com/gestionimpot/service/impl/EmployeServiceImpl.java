@@ -72,11 +72,12 @@ public class EmployeServiceImpl implements EmployeService {
     @Override
     public int save(Employe employe) {
         Employe foundedEmploye = employeDao.findByCin(employe.getCin());
-        Societe foundedSociete = societeDao.findByRef(employe.getSociete().getRef());
+        Societe foundedSociete = societeDao.findByRef(employe.getSocieteRef());
 
         if (foundedEmploye != null) return -1;
         if (foundedSociete == null) return -2 ;
         else {
+            employe.setSociete(foundedSociete);
             employeDao.save(employe);
             return 1 ;
         }

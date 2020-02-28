@@ -11,8 +11,17 @@ public class FactureGain extends Facture {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
+	private String clientCne ;
 	@ManyToOne
 	private Client client;
+
+	public String getClientCne() {
+		return clientCne;
+	}
+
+	public void setClientCne(String clientCne) {
+		this.clientCne = clientCne;
+	}
 
 	public Long getId() {
 		return id;

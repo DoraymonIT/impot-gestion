@@ -19,5 +19,9 @@ public interface FactureGainDao extends JpaRepository<FactureGain, Long> {
 
   List<FactureGain> findByDateFacturation(Date dateFacturation);
 
+  List<FactureGain> findByClientCne(String clientCne);
+
+
+
 
 }

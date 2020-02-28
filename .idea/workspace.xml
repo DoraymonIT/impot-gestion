@@ -3,18 +3,44 @@
   <component name="ChangeListManager">
     <list default="true" id="6adb1126-beeb-46a9-938f-d7e287aa0115" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gestion-impot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Gestion-impot.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/facade/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/facade/ClientService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/facade/DeclarationIRService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/facade/DeclarationIRService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/impl/ClientServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/impl/ClientServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/bean/DeclarationIR.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/bean/DeclarationIR.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/bean/DeclarationIS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/bean/DeclarationIS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/bean/DeclarationTva.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/bean/DeclarationTva.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/bean/Employe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/bean/Employe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/bean/FactureCharge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/bean/FactureCharge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/bean/FactureGain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/bean/FactureGain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/bean/Societe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/bean/Societe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/bean/TauxDeIR.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/bean/TauxDeIR.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/bean/TauxDeIS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/bean/TauxDeIS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/dao/DeclarationIsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/dao/DeclarationISDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/dao/DeclarationTvaDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/dao/DeclarationTvaDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/dao/FactureChargeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/dao/FactureChargeDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/dao/FactureDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/dao/FactureDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/dao/FactureGainDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/dao/FactureGainDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/dao/TauxDeIsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/dao/TauxDeISDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/facade/DeclarationISService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/facade/DeclarationISService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/facade/DeclarationTvaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/facade/DeclarationTvaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/facade/FactureChargeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/facade/FactureChargeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/facade/FactureGainService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/facade/FactureGainService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/facade/TauxDeIRService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/facade/TauxDeIRService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/facade/TauxDeISService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/facade/TauxDeISService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/impl/DeclarationIRServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/impl/DeclarationIRServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/ws/rest/ClientRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/ws/rest/ClientRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/ws/rest/DeclarationIRRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/ws/rest/DeclarationIRRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/impl/DeclarationISServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/impl/DeclarationISServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/impl/DeclarationTvaServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/impl/DeclarationTvaServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/impl/EmployeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/impl/EmployeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/impl/FactureChargeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/impl/FactureChargeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/impl/FactureGainServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/impl/FactureGainServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/impl/FournisseurServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/impl/FournisseurServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/impl/SocieteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/impl/SocieteServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/impl/TauxDeIRServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/impl/TauxDeIRServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/impl/TauxDeISServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/service/impl/TauxDeISServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/ws/rest/DeclarationISRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/ws/rest/DeclarationISRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/ws/rest/EmployeRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/ws/rest/EmployeRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/ws/rest/DeclarationTVARestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/ws/rest/DeclarationTVARestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/ws/rest/FactureChargeRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/ws/rest/FactureChargeRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/ws/rest/FactureGainRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/ws/rest/FactureGainRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/ws/rest/TauxDeIRRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/ws/rest/TauxDeIRRestController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/ws/rest/TauxDeISRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/ws/rest/TauxDeISRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionimpot/ws/rest/TypeSocieteRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionimpot/ws/rest/TypeSocieteRestController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +140,8 @@
       <workItem from="1582453767870" duration="158000" />
       <workItem from="1582550545526" duration="596000" />
       <workItem from="1582739995883" duration="4325000" />
-      <workItem from="1582797779181" duration="3149000" />
+      <workItem from="1582797779181" duration="17433000" />
+      <workItem from="1582890101893" duration="679000" />
     </task>
     <task id="LOCAL-00001" summary="life is hard">
       <created>1581705262196</created>
@@ -200,7 +227,21 @@
       <option name="project" value="LOCAL" />
       <updated>1582415077587</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="kolchi">
+      <created>1582801119004</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1582801119004</updated>
+    </task>
+    <task id="LOCAL-00014" summary="kolchi">
+      <created>1582801153662</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1582801153662</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,10 +298,10 @@
       <screen x="51" y="27" width="1315" height="741" />
     </state>
     <state x="303" y="58" width="800" height="677" key="#Notifications/51.27.1315.741@51.27.1315.741" timestamp="1581796357031" />
-    <state x="516" y="109" width="374" height="575" key="#com.intellij.ide.util.MemberChooser" timestamp="1582752504276">
+    <state x="516" y="109" width="374" height="575" key="#com.intellij.ide.util.MemberChooser" timestamp="1582825571671">
       <screen x="51" y="27" width="1315" height="741" />
     </state>
-    <state x="516" y="109" width="374" height="575" key="#com.intellij.ide.util.MemberChooser/51.27.1315.741@51.27.1315.741" timestamp="1582752504276" />
+    <state x="516" y="109" width="374" height="575" key="#com.intellij.ide.util.MemberChooser/51.27.1315.741@51.27.1315.741" timestamp="1582825571671" />
     <state x="456" y="257" width="504" height="290" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1582233269326">
       <screen x="51" y="27" width="1315" height="741" />
     </state>
@@ -269,42 +310,42 @@
       <screen x="51" y="27" width="1315" height="741" />
     </state>
     <state x="191" y="27" width="1014" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/51.27.1315.741@51.27.1315.741" timestamp="1582370475163" />
-    <state x="270" y="27" width="866" height="741" key="CommitChangelistDialog2" timestamp="1582801116946">
+    <state x="270" y="27" width="866" height="741" key="CommitChangelistDialog2" timestamp="1582890812547">
       <screen x="51" y="27" width="1315" height="741" />
     </state>
-    <state x="270" y="27" width="866" height="741" key="CommitChangelistDialog2/51.27.1315.741@51.27.1315.741" timestamp="1582801116946" />
-    <state width="1269" height="152" key="GridCell.Tab.0.bottom" timestamp="1582755998496">
+    <state x="270" y="27" width="866" height="741" key="CommitChangelistDialog2/51.27.1315.741@51.27.1315.741" timestamp="1582890812547" />
+    <state width="1269" height="152" key="GridCell.Tab.0.bottom" timestamp="1582828243534">
       <screen x="51" y="27" width="1315" height="741" />
     </state>
-    <state width="1269" height="152" key="GridCell.Tab.0.bottom/51.27.1315.741@51.27.1315.741" timestamp="1582755998496" />
-    <state width="1269" height="152" key="GridCell.Tab.0.center" timestamp="1582755998495">
+    <state width="1269" height="152" key="GridCell.Tab.0.bottom/51.27.1315.741@51.27.1315.741" timestamp="1582828243534" />
+    <state width="1269" height="152" key="GridCell.Tab.0.center" timestamp="1582828243533">
       <screen x="51" y="27" width="1315" height="741" />
     </state>
-    <state width="1269" height="152" key="GridCell.Tab.0.center/51.27.1315.741@51.27.1315.741" timestamp="1582755998495" />
-    <state width="1269" height="152" key="GridCell.Tab.0.left" timestamp="1582755998495">
+    <state width="1269" height="152" key="GridCell.Tab.0.center/51.27.1315.741@51.27.1315.741" timestamp="1582828243533" />
+    <state width="1269" height="152" key="GridCell.Tab.0.left" timestamp="1582828243533">
       <screen x="51" y="27" width="1315" height="741" />
     </state>
-    <state width="1269" height="152" key="GridCell.Tab.0.left/51.27.1315.741@51.27.1315.741" timestamp="1582755998495" />
-    <state width="1269" height="152" key="GridCell.Tab.0.right" timestamp="1582755998496">
+    <state width="1269" height="152" key="GridCell.Tab.0.left/51.27.1315.741@51.27.1315.741" timestamp="1582828243533" />
+    <state width="1269" height="152" key="GridCell.Tab.0.right" timestamp="1582828243533">
       <screen x="51" y="27" width="1315" height="741" />
     </state>
-    <state width="1269" height="152" key="GridCell.Tab.0.right/51.27.1315.741@51.27.1315.741" timestamp="1582755998496" />
-    <state width="1269" height="152" key="GridCell.Tab.1.bottom" timestamp="1582755998498">
+    <state width="1269" height="152" key="GridCell.Tab.0.right/51.27.1315.741@51.27.1315.741" timestamp="1582828243533" />
+    <state width="1269" height="152" key="GridCell.Tab.1.bottom" timestamp="1582828243535">
       <screen x="51" y="27" width="1315" height="741" />
     </state>
-    <state width="1269" height="152" key="GridCell.Tab.1.bottom/51.27.1315.741@51.27.1315.741" timestamp="1582755998498" />
-    <state width="1269" height="152" key="GridCell.Tab.1.center" timestamp="1582755998497">
+    <state width="1269" height="152" key="GridCell.Tab.1.bottom/51.27.1315.741@51.27.1315.741" timestamp="1582828243535" />
+    <state width="1269" height="152" key="GridCell.Tab.1.center" timestamp="1582828243534">
       <screen x="51" y="27" width="1315" height="741" />
     </state>
-    <state width="1269" height="152" key="GridCell.Tab.1.center/51.27.1315.741@51.27.1315.741" timestamp="1582755998497" />
-    <state width="1269" height="152" key="GridCell.Tab.1.left" timestamp="1582755998497">
+    <state width="1269" height="152" key="GridCell.Tab.1.center/51.27.1315.741@51.27.1315.741" timestamp="1582828243534" />
+    <state width="1269" height="152" key="GridCell.Tab.1.left" timestamp="1582828243534">
       <screen x="51" y="27" width="1315" height="741" />
     </state>
-    <state width="1269" height="152" key="GridCell.Tab.1.left/51.27.1315.741@51.27.1315.741" timestamp="1582755998497" />
-    <state width="1269" height="152" key="GridCell.Tab.1.right" timestamp="1582755998497">
+    <state width="1269" height="152" key="GridCell.Tab.1.left/51.27.1315.741@51.27.1315.741" timestamp="1582828243534" />
+    <state width="1269" height="152" key="GridCell.Tab.1.right" timestamp="1582828243535">
       <screen x="51" y="27" width="1315" height="741" />
     </state>
-    <state width="1269" height="152" key="GridCell.Tab.1.right/51.27.1315.741@51.27.1315.741" timestamp="1582755998497" />
+    <state width="1269" height="152" key="GridCell.Tab.1.right/51.27.1315.741@51.27.1315.741" timestamp="1582828243535" />
     <state x="241" y="54" width="924" height="684" key="Maven.ArtifactSearchDialog" timestamp="1582321514985">
       <screen x="51" y="27" width="1315" height="741" />
     </state>
@@ -329,18 +370,18 @@
       <screen x="51" y="27" width="1315" height="741" />
     </state>
     <state x="191" y="27" width="1024" height="741" key="SettingsEditor/51.27.1315.741@51.27.1315.741" timestamp="1582753974462" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1582410334607">
+    <state width="498" height="446" key="SwitcherDM" timestamp="1582825124821">
       <screen x="51" y="27" width="1315" height="741" />
     </state>
-    <state width="498" height="446" key="SwitcherDM/51.27.1315.741@51.27.1315.741" timestamp="1582410334607" />
+    <state width="498" height="446" key="SwitcherDM/51.27.1315.741@51.27.1315.741" timestamp="1582825124821" />
     <state x="466" y="102" width="463" height="589" key="VCS.ChangeListViewerDialog" timestamp="1581762757217">
       <screen x="51" y="27" width="1315" height="741" />
     </state>
     <state x="466" y="102" width="463" height="589" key="VCS.ChangeListViewerDialog/51.27.1315.741@51.27.1315.741" timestamp="1581762757217" />
-    <state x="303" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1582801135370">
+    <state x="303" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1582801160988">
       <screen x="51" y="27" width="1315" height="741" />
     </state>
-    <state x="303" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2/51.27.1315.741@51.27.1315.741" timestamp="1582801135370" />
+    <state x="303" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2/51.27.1315.741@51.27.1315.741" timestamp="1582801160988" />
     <state x="279" y="93" width="859" height="606" key="find.popup" timestamp="1582413210155">
       <screen x="51" y="27" width="1315" height="741" />
     </state>
@@ -361,9 +402,9 @@
       <screen x="51" y="27" width="1315" height="741" />
     </state>
     <state x="372" y="175" key="run.anything.popup/51.27.1315.741@51.27.1315.741" timestamp="1582320662519" />
-    <state x="371" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1582385858707">
+    <state x="371" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1582822858914">
       <screen x="51" y="27" width="1315" height="741" />
     </state>
-    <state x="371" y="89" width="672" height="678" key="search.everywhere.popup/51.27.1315.741@51.27.1315.741" timestamp="1582385858707" />
+    <state x="371" y="89" width="672" height="678" key="search.everywhere.popup/51.27.1315.741@51.27.1315.741" timestamp="1582822858914" />
   </component>
 </project>
