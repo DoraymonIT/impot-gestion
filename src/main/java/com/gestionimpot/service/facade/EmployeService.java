@@ -8,7 +8,7 @@ public interface EmployeService {
 
     public List<Employe> findAll();
 
-    public List<Employe> findByNom(String nom );
+    public List<Employe> findByNom(String nom);
 
     public List<Employe> findByPrenom(String prenom);
 
@@ -29,5 +29,7 @@ public interface EmployeService {
     public int save(Employe employe);
 
     public int deleteByCin(String cin);
-    
+
+    int updateSalaire(String cne, double NouveauSalaire);
+
 }

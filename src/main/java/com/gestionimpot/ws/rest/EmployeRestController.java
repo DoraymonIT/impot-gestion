@@ -1,7 +1,6 @@
 package com.gestionimpot.ws.rest;
 
 import com.gestionimpot.bean.Employe;
-import com.gestionimpot.bean.Societe;
 import com.gestionimpot.service.facade.EmployeService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -62,4 +61,10 @@ public class EmployeRestController {
     public int deleteByCin(@PathVariable  String cin) {
         return employeService.deleteByCin(cin);
     }
+
+    @PutMapping("/update/cin/{cne}/nouveauSal/{NouveauSalaire}")
+    public int updateSalaire(@PathVariable String cne,@PathVariable double NouveauSalaire) {
+        return employeService.updateSalaire(cne, NouveauSalaire);
+    }
+    
 }
