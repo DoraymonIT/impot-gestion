@@ -41,12 +41,16 @@ public class TauxDeIRRestController {
     public TauxDeIR findByRef(@PathVariable String ref) {
         return tauxDeIRService.findByRef(ref);
     }
- @PostMapping("/")
+    @PostMapping("/")
     public int save(@RequestBody TauxDeIR tauxDeIR) {
         return tauxDeIRService.save(tauxDeIR);
     }
-@DeleteMapping("/delete/ref")
+    @DeleteMapping("/delete/ref")
     public int deleteByRef(@PathVariable String ref) {
         return tauxDeIRService.deleteByRef(ref);
+    }
+    @PostMapping("/update")
+    public int update(@RequestBody  TauxDeIR tauxDeIR) {
+        return tauxDeIRService.update(tauxDeIR);
     }
 }

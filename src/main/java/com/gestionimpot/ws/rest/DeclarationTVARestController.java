@@ -1,6 +1,8 @@
 package com.gestionimpot.ws.rest;
 
 import com.gestionimpot.bean.DeclarationTva;
+import com.gestionimpot.bean.FactureCharge;
+import com.gestionimpot.bean.FactureGain;
 import com.gestionimpot.service.facade.DeclarationTvaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.Query;
@@ -43,8 +45,15 @@ public class DeclarationTVARestController {
         return declarationTvaService.save(declarationTva , declarationTva.getFactureGains() , declarationTva.getFactureCharges());
     }
     @DeleteMapping("/delete/{ref}")
-    public int DeleteByRef(@PathVariable  String ref) {
-        return declarationTvaService.DeleteByRef(ref);
+    public int deleteByRef(@PathVariable  String ref) {
+        return declarationTvaService.deleteByRef(ref);
     }
-
+    @PostMapping("/update")
+    public int update(@RequestBody  DeclarationTva declarationTva) {
+        return declarationTvaService.update(declarationTva, declarationTva.getFactureGains(), declarationTva.getFactureCharges());
+    }
+    @PostMapping("/updateList")
+    public int updateList(@RequestBody   DeclarationTva  declarationTva) {
+        return declarationTvaService.updateList(declarationTva.getRef(), declarationTva.getFactureGains(), declarationTva.getFactureCharges());
+    }
 }

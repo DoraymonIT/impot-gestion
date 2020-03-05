@@ -16,4 +16,5 @@ public interface TauxDeIRService {
     TauxDeIR findByRef(String ref);
     int save(TauxDeIR tauxDeIR);
     int deleteByRef(String ref);
+    int update(TauxDeIR tauxDeIR);
 }

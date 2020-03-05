@@ -16,6 +16,7 @@ public interface DeclarationIRService {
     public List<DeclarationIR> findByTauxDeIR(String tauxDeIR);
     public List<DeclarationIR> findAll();
     public int save(DeclarationIR declarationIR);
+    public int update(DeclarationIR declarationIR);
     public int removeByRef(String ref);
 
 

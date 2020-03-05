@@ -79,12 +79,73 @@ public class DeclarationTvaServiceImpl implements DeclarationTvaService {
     }
 
     @Override
-    public int DeleteByRef(String ref) {
+    public int deleteByRef(String ref) {
         DeclarationTva foundedDeclarationTva = declarationTvaDao.findByRef(ref) ;
         if (foundedDeclarationTva == null ) return  -1 ;
         else {
             declarationTvaDao.delete(foundedDeclarationTva);
             return 1;
         }
+    }
+
+    @Override
+    public int update(DeclarationTva declarationTva ,  List<FactureGain> factureGains , List<FactureCharge> factureCharges) {
+        DeclarationTva foundedDeclarationTva = declarationTvaDao.findByRef(declarationTva.getRef());
+        if (foundedDeclarationTva == null) return -1 ;
+        List<FactureCharge> factureCharges1 = foundedDeclarationTva.getFactureCharges();
+        List<FactureGain> factureGains1 = foundedDeclarationTva.getFactureGains() ;
+        Societe foundedSociete = foundedDeclarationTva.getSociete();
+        if(declarationTva.getSocieteRef()!= null) {
+            foundedSociete = societeDao.findByRef(declarationTva.getSocieteRef()) ;
+            if (foundedSociete == null) return -2 ;
+            foundedDeclarationTva.setSocieteRef(declarationTva.getSocieteRef());
+        }
+        if(factureGains != null) {
+            for (FactureGain g : factureGains) {
+                FactureGain foundedFactureGain = factureGainDao.findByNumeroFacture(g.getNumeroFacture());
+                if (foundedFactureGain == null) return -3;
+                factureGains1.add(foundedFactureGain);
+            }
+        }
+        if (factureCharges != null){
+            for (FactureCharge g :factureCharges) {
+                FactureCharge foundedFactureCharge = factureChargeDao.findByNumeroFacture(g.getNumeroFacture()) ;
+                if(foundedFactureCharge == null ) return -3 ;
+                factureCharges1.add(foundedFactureCharge);
+            }
+        }
+        foundedDeclarationTva.setSociete(foundedSociete);
+        foundedDeclarationTva.setFactureGains(factureGains1);
+        foundedDeclarationTva.setFactureCharges(factureCharges1);
+        if(declarationTva.getTotalTva() != null) foundedDeclarationTva.setTotalTva(declarationTva.getTotalTva());
+        if (declarationTva.getAnnee() != 0 ) foundedDeclarationTva.setAnnee(declarationTva.getAnnee());
+        declarationTvaDao.save(foundedDeclarationTva);
+        return 1;
+    }
+
+    @Override
+    public int updateList(String ref, List<FactureGain> factureGains, List<FactureCharge> factureCharges) {
+        DeclarationTva foundedDeclarationTva = declarationTvaDao.findByRef(ref);
+        if (foundedDeclarationTva == null) return -1 ;
+        if(factureGains != null) {
+            List<FactureGain> factureGains1 = new ArrayList<>() ;
+            for (FactureGain g : factureGains) {
+                FactureGain foundedFactureGain = factureGainDao.findByNumeroFacture(g.getNumeroFacture());
+                if (foundedFactureGain == null) return -3;
+                factureGains1.add(foundedFactureGain);
+            }
+            foundedDeclarationTva.setFactureGains(factureGains1);
+        }
+        if (factureCharges != null){
+            List<FactureCharge> factureCharges1 = new ArrayList<>() ;
+            for (FactureCharge g :factureCharges) {
+                FactureCharge foundedFactureCharge = factureChargeDao.findByNumeroFacture(g.getNumeroFacture()) ;
+                if(foundedFactureCharge == null ) return -3 ;
+                factureCharges1.add(foundedFactureCharge);
+            }
+            foundedDeclarationTva.setFactureCharges(factureCharges1);
+        }
+        declarationTvaDao.save(foundedDeclarationTva);
+        return 1; 
     }
 }

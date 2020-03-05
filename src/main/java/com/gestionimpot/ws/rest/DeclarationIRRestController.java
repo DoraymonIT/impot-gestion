@@ -54,5 +54,9 @@ public class DeclarationIRRestController {
     public int removeByRef(@PathVariable  String ref) {
         return declarationIRService.removeByRef(ref);
     }
+    @PostMapping("/update/")
+    public int update(@RequestBody  DeclarationIR declarationIR) {
+        return declarationIRService.update(declarationIR);
+    }
 }
 

@@ -83,6 +83,37 @@ public class DeclarationIRServiceImpl implements DeclarationIRService {
     }
 
     @Override
+    public int update(DeclarationIR declarationIR) {
+        DeclarationIR foundedDeclarationIR = declarationIRDao.findByRef(declarationIR.getRef());
+        if (foundedDeclarationIR == null) return -3;
+            Employe foundedEmploye = foundedDeclarationIR.getEmploye();
+            Societe foundedSociete = foundedDeclarationIR.getSociete();
+            TauxDeIR foundedTauxDeIR = foundedDeclarationIR.getTauxDeIR();
+            Double foundedSalaire = foundedDeclarationIR.getSalaire();
+            Double foundedMontantDeclaration = foundedDeclarationIR.getMontantDeclaration();
+            if (declarationIR.getEmplyeRef() != null) {
+                foundedEmploye = employeDao.findByCin(declarationIR.getEmplyeRef());
+                foundedDeclarationIR.setEmplyeRef(declarationIR.getEmplyeRef());
+                if (foundedEmploye == null) return -1;
+            }
+            if (declarationIR.getSocieteRef() != null) {
+                foundedSociete = societeDao.findByRef(declarationIR.getSocieteRef());
+                foundedDeclarationIR.setSocieteRef(declarationIR.getSocieteRef());
+                if (foundedSociete == null) return -2;
+            }if (declarationIR.getTauxDeIrRef() != null) {
+                foundedTauxDeIR = tauxDeIRDao.findByRef(declarationIR.getTauxDeIrRef());
+                foundedDeclarationIR.setTauxDeIrRef(declarationIR.getTauxDeIrRef());
+                if (foundedTauxDeIR == null) return -4;
+            }
+                foundedDeclarationIR.setSalaire(declarationIR.getSalaire());
+                foundedDeclarationIR.setMontantDeclaration(declarationIR.getMontantDeclaration());
+                foundedDeclarationIR.setEmploye(foundedEmploye);
+                foundedDeclarationIR.setSociete(foundedSociete);
+                foundedDeclarationIR.setTauxDeIR(foundedTauxDeIR);
+                declarationIRDao.save(foundedDeclarationIR);
+                return 1;
+    }
+    @Override
     public int removeByRef(String ref) {
         DeclarationIR foundedDeclarationIR = declarationIRDao.findByRef(ref);
         if (foundedDeclarationIR == null) return -1;
