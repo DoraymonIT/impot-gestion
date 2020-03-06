@@ -18,7 +18,8 @@ public class EmployeServiceImpl implements EmployeService {
     private EmployeDao employeDao;
 
     @Autowired
-    private SocieteDao societeDao ;
+    private SocieteDao societeDao;
+
     @Override
     public List<Employe> findAll() {
         return employeDao.findAll();
@@ -74,22 +75,38 @@ public class EmployeServiceImpl implements EmployeService {
         Employe foundedEmploye = employeDao.findByCin(employe.getCin());
         Societe foundedSociete = societeDao.findByRef(employe.getSocieteRef());
 
-        if (foundedEmploye != null) return -1;
-        if (foundedSociete == null) return -2 ;
-        else {
+        if (foundedEmploye != null) {
+            return -1;
+        }
+        if (foundedSociete == null) {
+            return -2;
+        } else {
             employe.setSociete(foundedSociete);
             employeDao.save(employe);
-            return 1 ;
+            return 1;
         }
     }
 
     @Override
     public int deleteByCin(String cin) {
         Employe foundedEmploye = employeDao.findByCin(cin);
-        if (foundedEmploye == null) return -1;
-        else{
+        if (foundedEmploye == null) {
+            return -1;
+        } else {
             employeDao.delete(foundedEmploye);
-            return  1 ;
+            return 1;
+        }
+    }
+
+    @Override
+    public int updateSalaire(String cne, double NouveauSalaire) {
+        Employe EmplyeFounded = findByCin(cne);
+        if (EmplyeFounded == null) {
+            return -1;
+        } else {
+            EmplyeFounded.setSalaire(NouveauSalaire);
+            employeDao.save(EmplyeFounded);
+            return 1;
         }
     }
 }

@@ -9,9 +9,8 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface EmployeDao extends JpaRepository<Employe, Long> {
 
-    public List<Employe> findAll();
 
-    public List<Employe> findByNom(String nom );
+    public List<Employe> findByNom(String nom);
 
     public List<Employe> findByPrenom(String prenom);
 
@@ -27,7 +26,7 @@ public interface EmployeDao extends JpaRepository<Employe, Long> {
 
     public List<Employe> findBySalaire(double salaire);
 
-
-
+    @Query("delete from Employe where cne = 'cne'")
+    int updateSalaire(String cne, double NouveauSalaire);
 
 }
