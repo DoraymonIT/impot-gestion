@@ -5,10 +5,13 @@ import com.gestionimpot.bean.TauxDeIS;
 import com.gestionimpot.dao.DeclarationISDao;
 import com.gestionimpot.dao.TauxDeISDao;
 import com.gestionimpot.service.facade.TauxDeISService;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.util.Date;
 import java.util.List;
-import org.joda.time.LocalDate;
-import org.joda.time.Months;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,10 +24,25 @@ public class TauxDeISServiceImpl implements TauxDeISService {
     @Autowired
     DeclarationISDao declarationIsDao ;
     @Override
-    public double pourcentageRetard(LocalDate dateFacturation, LocalDate datePaiement) {
-        int months = Months.monthsBetween(datePaiement , dateFacturation ).getMonths();
-        if(months >= 1 ) return  0.05 + (months-1)*0.01;
-        else return 0;
+    public double pourcentageRetard(Date dateFacturation, Date datePaiement) {
+     
+        Instant instant = dateFacturation.toInstant();
+        ZonedDateTime zdt = instant.atZone(ZoneId.systemDefault());
+        LocalDate fact = zdt.toLocalDate();
+
+        Instant instantt = datePaiement.toInstant();
+        ZonedDateTime zdtt = instantt.atZone(ZoneId.systemDefault());
+        LocalDate pai = zdtt.toLocalDate();
+
+       
+        Period difference = Period.between(fact, pai);
+        int months = difference.getMonths();
+
+      if (months >= 1) {
+            return 0.05 + (months - 1) * 0.01;
+        } else {
+            return 0;
+        }
     }
 
 

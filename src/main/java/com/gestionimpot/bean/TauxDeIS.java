@@ -1,6 +1,7 @@
 package com.gestionimpot.bean;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.Date;
 
@@ -9,67 +10,100 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
 public class TauxDeIS {
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long id;
-	private String ref ;
 
-	@JsonFormat(pattern="yyyy-MM-dd")
-	private Date dateDebut;
-	@JsonFormat(pattern="yyyy-MM-dd")
-	private Date dateFin;
-	private  double montantMin;
-	private  double montantMax;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+    private String ref;
+    
+    private double TauxMin;
+    private double TauxMoy;
+    private double TauxMax;
 
-	public String getRef() {
-		return ref;
-	}
+    @DateTimeFormat(pattern = "dd-MM-yyyy")
+    @Temporal(javax.persistence.TemporalType.DATE)
+    private Date dateDebut;
+    @DateTimeFormat(pattern = "dd-MM-yyyy")
+    @Temporal(javax.persistence.TemporalType.DATE)
+    private Date dateFin;
+    private double montantMin;
+    private double montantMax;
 
-	public void setRef(String ref) {
-		this.ref = ref;
-	}
+    public void setTauxMin(double TauxMin) {
+        this.TauxMin = TauxMin;
+    }
 
-	public Date getDateDebut() {
-		return dateDebut;
-	}
+    public void setTauxMoy(double TauxMoy) {
+        this.TauxMoy = TauxMoy;
+    }
 
-	public void setDateDebut(Date dateDebut) {
-		this.dateDebut = dateDebut;
-	}
+    public void setTauxMax(double TauxMax) {
+        this.TauxMax = TauxMax;
+    }
 
-	public Date getDateFin() {
-		return dateFin;
-	}
+    public double getTauxMin() {
+        return TauxMin;
+    }
 
-	public void setDateFin(Date dateFin) {
-		this.dateFin = dateFin;
-	}
+    public double getTauxMoy() {
+        return TauxMoy;
+    }
 
-	public  double getMontantMin() {
-		return montantMin;
-	}
+    public double getTauxMax() {
+        return TauxMax;
+    }
 
-	public void setMontantMin( double montantMin) {
-		this.montantMin = montantMin;
-	}
+    public String getRef() {
+        return ref;
+    }
 
-	public  double getMontantMax() {
-		return montantMax;
-	}
+    public void setRef(String ref) {
+        this.ref = ref;
+    }
 
-	public Long getId() {
-		return id;
-	}
+    public Date getDateDebut() {
+        return dateDebut;
+    }
 
-	public void setId(Long id) {
-		this.id = id;
-	}
+    public void setDateDebut(Date dateDebut) {
+        this.dateDebut = dateDebut;
+    }
 
-	public void setMontantMax( double montantMax) {
-		this.montantMax = montantMax;
-	}
+    public Date getDateFin() {
+        return dateFin;
+    }
+
+    public void setDateFin(Date dateFin) {
+        this.dateFin = dateFin;
+    }
+
+    public double getMontantMin() {
+        return montantMin;
+    }
+
+    public void setMontantMin(double montantMin) {
+        this.montantMin = montantMin;
+    }
+
+    public double getMontantMax() {
+        return montantMax;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setMontantMax(double montantMax) {
+        this.montantMax = montantMax;
+    }
 
 }

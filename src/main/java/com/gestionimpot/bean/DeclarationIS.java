@@ -1,5 +1,6 @@
 package com.gestionimpot.bean;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import javax.persistence.*;
 
 @Entity
@@ -10,9 +11,11 @@ public class DeclarationIS  {
 	private Long id;
 	private String reference;
 	private String tauxDeISRef;
+        @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
 	@ManyToOne
 	private TauxDeIS tauxDeIS;
 	private String declarationTvaRef ;
+        @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
 	@ManyToOne
 	private DeclarationTva declarationTva ;
 	private  String societeRef;

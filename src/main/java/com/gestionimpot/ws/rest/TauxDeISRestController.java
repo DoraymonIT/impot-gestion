@@ -1,22 +1,30 @@
 package com.gestionimpot.ws.rest;
 
-import com.gestionimpot.bean.DeclarationIS;
 import com.gestionimpot.bean.TauxDeIS;
 import com.gestionimpot.service.facade.TauxDeISService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 
-import org.joda.time.LocalDate;
 import java.util.*;
+import org.springframework.format.annotation.DateTimeFormat;
 
 @RestController
 @RequestMapping("/impot/TauxDeIS")
 public class TauxDeISRestController {
     @Autowired
     TauxDeISService tauxDeISService ;
+    
+     @GetMapping("/pourcentageRetard/{dateFacturation}/{datePaiement}")
+    public double pourcentageRetard(@PathVariable @DateTimeFormat(pattern= "dd-MM-yyyy")Date dateFacturation,
+            @PathVariable @DateTimeFormat(pattern= "dd-MM-yyyy") Date datePaiement) 
+    {
+        return tauxDeISService.pourcentageRetard(dateFacturation, datePaiement);
+    }
+    
+    
     @GetMapping("/dateDebut/{dateDebut}")
-    public List<TauxDeIS> findByDateDebut(@PathVariable  Date dateDebut) {
+    public List<TauxDeIS> findByDateDebut(@PathVariable  @DateTimeFormat(pattern= "dd-MM-yyyy") Date dateDebut) {
         return tauxDeISService.findByDateDebut(dateDebut);
     }
     @GetMapping("/")
@@ -24,7 +32,7 @@ public class TauxDeISRestController {
         return tauxDeISService.findAll();
     }
     @GetMapping("/dateFin/{dateFin}")
-    public List<TauxDeIS> findByDateFin(@PathVariable  Date dateFin) {
+    public List<TauxDeIS> findByDateFin(@PathVariable  @DateTimeFormat(pattern= "dd-MM-yyyy") Date dateFin) {
         return tauxDeISService.findByDateFin(dateFin);
     }
     @GetMapping("/montantMin/{montantMin}")
