@@ -30,6 +30,6 @@ public interface EmployeService {
 
     public int deleteByCin(String cin);
 
-    int updateSalaire(String cne, double NouveauSalaire);
+    int updateSalaire(String cne, double nouveauSalaire);
 
 }

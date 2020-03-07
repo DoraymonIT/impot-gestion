@@ -26,7 +26,9 @@ public interface EmployeDao extends JpaRepository<Employe, Long> {
 
     public List<Employe> findBySalaire(double salaire);
 
-    @Query("delete from Employe where cne = 'cne'")
-    int updateSalaire(String cne, double NouveauSalaire);
+    @Query("update Employe set salaire = nouveauSalaire where cne = 'cne'")
+    int updateSalaire(String cne, double nouveauSalaire);
+    
+    
 
 }

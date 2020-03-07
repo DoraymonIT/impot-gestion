@@ -1,15 +1,18 @@
-
 package com.gestionimpot.service.facade;
 
 import com.gestionimpot.bean.Facture;
-import com.gestionimpot.bean.Societe;
 import java.util.Date;
 import java.util.List;
 
 public interface FactureService {
-    Facture findBynNumeroFacture(Long numeroFacture);
 
-    List<Facture> findAll();
+    Facture findByNumeroFacture(Long numeroFacture);
+
+    List<Facture> findByNomFacture(String nomFacture);
+
+    List<Facture> findByMontantHT(double montantHT);
+
+    List<Facture> findByMontantTTC(double montantTTC);
 
     List<Facture> findByTva(double tva);
 
@@ -17,6 +20,6 @@ public interface FactureService {
 
     List<Facture> findByDateFacturation(Date dateFacturation);
 
-
+    List<Facture> findAll();
 
 }

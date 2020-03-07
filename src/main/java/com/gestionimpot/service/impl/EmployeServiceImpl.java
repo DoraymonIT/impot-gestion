@@ -99,12 +99,12 @@ public class EmployeServiceImpl implements EmployeService {
     }
 
     @Override
-    public int updateSalaire(String cne, double NouveauSalaire) {
+    public int updateSalaire(String cne, double nouveauSalaire) {
         Employe EmplyeFounded = findByCin(cne);
         if (EmplyeFounded == null) {
             return -1;
         } else {
-            EmplyeFounded.setSalaire(NouveauSalaire);
+            EmplyeFounded.setSalaire(nouveauSalaire);
             employeDao.save(EmplyeFounded);
             return 1;
         }

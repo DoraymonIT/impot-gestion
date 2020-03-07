@@ -1,4 +1,3 @@
-
 package com.gestionimpot.dao;
 
 import com.gestionimpot.bean.DeclarationTva;
@@ -9,25 +8,21 @@ import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-
 @Repository
 public interface FactureDao extends JpaRepository<Facture, Long> {
 
-     Facture findByNumeroFacture(Long numeroFacture);
+    Facture findByNumeroFacture(Long numeroFacture);
 
-     List<Facture> findByNomFacture(String nomFacture);
+    List<Facture> findByNomFacture(String nomFacture);
 
-     List<Facture> findByMontantHT(double montantHT);
+    List<Facture> findByMontantHT(double montantHT);
 
-     List<Facture> findByMontantTTC(double montantTTC);
+    List<Facture> findByMontantTTC(double montantTTC);
 
-     List<Facture> findAll();
+    List<Facture> findByTva(double tva);
 
-     List<Facture> findByTva(double tva);
+    List<Facture> findByDatePaiement(Date datePaiement);
 
-     List<Facture> findByDatePaiement(Date datePaiement);
-
-     List<Facture> findByDateFacturation(Date dateFacturation);
-
+    List<Facture> findByDateFacturation(Date dateFacturation);
 
 }
