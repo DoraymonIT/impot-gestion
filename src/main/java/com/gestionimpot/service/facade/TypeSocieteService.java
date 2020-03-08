@@ -9,4 +9,5 @@ public interface TypeSocieteService {
     List<TypeSociete> findAll();
     int deleteByLibelle(String libelle);
     int save(TypeSociete typeSociete);
+    int update(TypeSociete typeSociete);
 }

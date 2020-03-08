@@ -11,48 +11,57 @@ import com.gestionimpot.service.facade.SocieteService;
 @RestController
 @RequestMapping("impot/societe")
 public class SocieteRestController {
-    @Autowired
-    SocieteService societeService ;
-    @GetMapping("/typeSociete/{typeSociete}")
-    public List<Societe> findByTypeSociete(@PathVariable String typeSociete) {
-        return societeService.findByTypeSociete(typeSociete);
-    }
+	@Autowired
+	SocieteService societeService;
 
-    @GetMapping("/ref/{ref}")
-    public Societe findByRef(@PathVariable String ref) {
-        return societeService.findByRef(ref);
-    }
-    @GetMapping("/nom/{nom}")
-    public List<Societe> findByNom(@PathVariable  String nom) {
-        return societeService.findByNom(nom);
-    }
-    @GetMapping("/")
-    public List<Societe> findAll() {
-        return societeService.findAll();
-    }
-    @GetMapping("/adresse/{adresse}")
-    public List<Societe> findByAdresse(@PathVariable  String adresse) {
-        return societeService.findByAdresse(adresse);
-    }
-    @GetMapping("/capital/{capital}")
-    public List<Societe> findByCapital(@PathVariable Double capital) {
-        return societeService.findByCapital(capital);
-    }
-@GetMapping("/nbrEmployes/{nbrEmployes}")
-    public List<Societe> findByNbrEmployes(@PathVariable  Double nbrEmployes) {
-        return societeService.findByNbrEmployes(nbrEmployes);
-    }
-    @PostMapping("/")
-    public int save(@RequestBody Societe societe) {
-        return societeService.save(societe);
-    }
-    @DeleteMapping("/delete/{ref}")
-    public int deleteByRef(@RequestBody  String ref) {
-        return societeService.deleteByRef(ref);
-    }
-@PostMapping("/update/")
+	@GetMapping("/typeSociete/{typeSociete}")
+	public List<Societe> findByTypeSociete(@PathVariable String typeSociete) {
+		return societeService.findByTypeSociete(typeSociete);
+	}
+
+	@GetMapping("/ref/{ref}")
+	public Societe findByRef(@PathVariable String ref) {
+		return societeService.findByRef(ref);
+	}
+
+	@GetMapping("/nom/{nom}")
+	public List<Societe> findByNom(@PathVariable String nom) {
+		return societeService.findByNom(nom);
+	}
+
+	@GetMapping("/")
+	public List<Societe> findAll() {
+		return societeService.findAll();
+	}
+
+	@GetMapping("/adresse/{adresse}")
+	public List<Societe> findByAdresse(@PathVariable String adresse) {
+		return societeService.findByAdresse(adresse);
+	}
+
+	@GetMapping("/capital/{capital}")
+	public List<Societe> findByCapital(@PathVariable Double capital) {
+		return societeService.findByCapital(capital);
+	}
+
+	@GetMapping("/nbrEmployes/{nbrEmployes}")
+	public List<Societe> findByNbrEmployes(@PathVariable Double nbrEmployes) {
+		return societeService.findByNbrEmployes(nbrEmployes);
+	}
+
+	@PostMapping("/")
+	public int save(@RequestBody Societe societe) {
+		return societeService.save(societe);
+	}
+
+	@DeleteMapping("/delete/{ref}")
+	public int deleteByRef(@RequestBody String ref) {
+		return societeService.deleteByRef(ref);
+	}
+
+	@PostMapping("/update")
 	public int update(@RequestBody Societe societe) {
 		return societeService.update(societe);
 	}
-    
+
 }

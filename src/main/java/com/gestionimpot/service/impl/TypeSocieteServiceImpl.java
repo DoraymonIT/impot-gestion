@@ -45,4 +45,15 @@ public class TypeSocieteServiceImpl implements TypeSocieteService{
             return 1;
         }
     }
+
+	@Override
+	public int update(TypeSociete typeSociete) {
+		TypeSociete foundedTypeSociete = typeSocieteDao.findByLibelle(typeSociete.getLibelle());
+		if(foundedTypeSociete!=null) return -1;
+		else {
+			foundedTypeSociete.setLibelle(typeSociete.getLibelle());
+			typeSocieteDao.save(foundedTypeSociete);
+			return 1;
+		}
+	}
 }
