@@ -83,4 +83,22 @@ public class SocieteServiceImpl implements SocieteService {
             return 1;
         }
     }
+
+	@Override
+	public int update(Societe societe) {
+		Societe foundedSociete = societeDao.findByRef(societe.getRef());
+		 if (foundedSociete==null) {
+			 return -1;
+		 }
+		 else {
+		  foundedSociete.setAdresse(societe.getAdresse());
+		  foundedSociete.setCapital(societe.getCapital());
+		  foundedSociete.setNbrEmployes(societe.getCapital());
+		  foundedSociete.setNom(societe.getNom());
+		  foundedSociete.setTypeSociete(societe.getTypeSociete());
+		  societeDao.save(foundedSociete);
+		  return 1;
+		  
+		 }
+	}
 }

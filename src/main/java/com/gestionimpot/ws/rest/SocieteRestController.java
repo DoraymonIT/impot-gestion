@@ -50,4 +50,9 @@ public class SocieteRestController {
     public int deleteByRef(@RequestBody  String ref) {
         return societeService.deleteByRef(ref);
     }
+@PostMapping("/update/")
+	public int update(@RequestBody Societe societe) {
+		return societeService.update(societe);
+	}
+    
 }

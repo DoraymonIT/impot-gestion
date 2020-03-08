@@ -2,12 +2,14 @@ package com.gestionimpot.service.facade;
 
 import java.util.List;
 
+
 import com.gestionimpot.bean.Societe;
-import com.gestionimpot.bean.TypeSociete;
+
 
 public interface SocieteService {
     List<Societe> findByTypeSociete(String typeSociete);
     int deleteByRef(String ref);
+    public int update(Societe societe);
     int save(Societe societe) ;
     Societe findByRef(String ref);
     List<Societe> findByNom(String nom);
