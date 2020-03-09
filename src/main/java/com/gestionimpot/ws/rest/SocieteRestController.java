@@ -54,8 +54,8 @@ public class SocieteRestController {
 		return societeService.save(societe);
 	}
 
-	@DeleteMapping("/delete/{ref}")
-	public int deleteByRef(@RequestBody String ref) {
+	@DeleteMapping("/ref/{ref}")
+	public int deleteByRef(@PathVariable String ref) {
 		return societeService.deleteByRef(ref);
 	}
 

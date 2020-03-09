@@ -34,9 +34,5 @@ public class TypeSocieteRestController {
 		return typeSocieteService.save(typeSociete);
 	}
 
-	@GetMapping("/update")
-	public int update(@RequestBody TypeSociete typeSociete) {
-		return typeSocieteService.update(typeSociete);
-	}
 
 }

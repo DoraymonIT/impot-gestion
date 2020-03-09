@@ -93,7 +93,7 @@ public class SocieteServiceImpl implements SocieteService {
 		 else {
 		  foundedSociete.setAdresse(societe.getAdresse());
 		  foundedSociete.setCapital(societe.getCapital());
-		  foundedSociete.setNbrEmployes(societe.getCapital());
+		  foundedSociete.setNbrEmployes(societe.getNbrEmployes());
 		  foundedSociete.setNom(societe.getNom());
 		  foundedSociete.setTypeSociete(societe.getTypeSociete());
 		  societeDao.save(foundedSociete);
