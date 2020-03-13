@@ -17,20 +17,38 @@ public class Facture implements Serializable{
 	protected Long numeroFacture;
 	@ManyToOne
 	protected Societe societe;
+	protected String societeRef;
 	@JsonFormat(pattern="yyyy-MM-dd")
 	protected Date dateFacturation;
 	@JsonFormat(pattern="yyyy-MM-dd")
 	protected Date datePaiement;
 	@ManyToOne
 	protected DeclarationTva declarationTva;
+	protected String declarationRef;
 	protected   double montantHT;
 	protected   double montantTTC;
 	protected   double tva;
 
 //Nombre de lignes facturées  dg
-
+    
 	public Long getId() {
 		return id;
+	}
+
+	public String getDeclarationRef() {
+		return declarationRef;
+	}
+
+	public void setDeclarationRef(String declarationRef) {
+		this.declarationRef = declarationRef;
+	}
+
+	public String getSocieteRef() {
+		return societeRef;
+	}
+
+	public void setSocieteRef(String societeRef) {
+		this.societeRef = societeRef;
 	}
 
 	public void setId(Long id) {

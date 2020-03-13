@@ -5,14 +5,21 @@ import com.gestionimpot.service.facade.FactureChargeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Date;
 import java.util.List;
 
 @RestController
 @RequestMapping("/impot/FactureCharge")
 
 public class FactureChargeRestController {
-    @Autowired
+	
+    
+	@Autowired
     FactureChargeService factureChargeService ;
+	@GetMapping("/refsociete/ref/{ref}")
+	public List<FactureCharge> findBySocieteRef(@PathVariable String ref) {
+		return factureChargeService.findBySocieteRef(ref);
+	}
     @GetMapping("/")
     public List<FactureCharge> findAll() {
         return factureChargeService.findAll();
@@ -22,9 +29,9 @@ public class FactureChargeRestController {
         return factureChargeService.findByRef(ref);
     }
 
-    @GetMapping("/fournisseurCne/{fournisseurCne}")
-    public List<FactureCharge> findByFournisseurCne(@PathVariable  String fournisseurCne) {
-        return factureChargeService.findByFournisseurCne(fournisseurCne);
+    @GetMapping("/fournisseurCin/{fournisseurCin}")
+    public List<FactureCharge> findByFournisseurCin(@PathVariable  String fournisseurCin) {
+        return factureChargeService.findByFournisseurCin(fournisseurCin);
     }
     @PostMapping("/")
     public int save(@RequestBody  FactureCharge factureCharge) {
@@ -34,4 +41,36 @@ public class FactureChargeRestController {
     public int deleteByRef(@PathVariable  String ref) {
         return factureChargeService.deleteByRef(ref);
     }
+    @GetMapping("/numeroFacture/{numeroFacture}")
+	public FactureCharge findByNumeroFacture(Long numeroFacture) {
+		return factureChargeService.findByNumeroFacture(numeroFacture);
+	}
+    @GetMapping("/montantHT/{montantHT}")
+	public List<FactureCharge> findByMontantHT(double montantHT) {
+		return factureChargeService.findByMontantHT(montantHT);
+	}
+    @GetMapping("/montantTTC/{montantTTC}")
+	public List<FactureCharge> findByMontantTTC(double montantTTC) {
+		return factureChargeService.findByMontantTTC(montantTTC);
+	}
+    @GetMapping("/tva/{tva}")
+	public List<FactureCharge> findByTva(double tva) {
+		return factureChargeService.findByTva(tva);
+	}
+    @GetMapping("/datePaiement/{datePaiement}")
+	public List<FactureCharge> findByDatePaiement(Date datePaiement) {
+		return factureChargeService.findByDatePaiement(datePaiement);
+	}
+    @GetMapping("/dateFacturation/{dateFacturation}")
+	public List<FactureCharge> findByDateFacturation(Date dateFacturation) {
+		return factureChargeService.findByDateFacturation(dateFacturation);
+	}
+    @PostMapping("/upd/")
+	public int update(@RequestBody FactureCharge factureCharge) {
+		return factureChargeService.update(factureCharge);
+	}
+    
+     
+    
+    
 }

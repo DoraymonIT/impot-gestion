@@ -14,17 +14,17 @@ public class FactureCharge extends Facture {
 	private Long id;
 	private String ref ;
 
-	public String getFournisseurCne() {
-		return fournisseurCne;
-	}
-
-	public void setFournisseurCne(String fournisseurCne) {
-		this.fournisseurCne = fournisseurCne;
-	}
-
-	private String fournisseurCne ;
+	private String fournisseurCin ;
 	@ManyToOne
 	private Fournisseur fournisseur;
+
+	public String getFournisseurCin() {
+		return fournisseurCin;
+	}
+
+	public void setFournisseurCin(String fournisseurCin) {
+		this.fournisseurCin = fournisseurCin;
+	}
 
 	public String getRef() {
 		return ref;
