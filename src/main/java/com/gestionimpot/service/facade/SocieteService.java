@@ -17,5 +17,6 @@ public interface SocieteService {
     List<Societe> findByAdresse(String adresse);
     List<Societe> findByCapital(Double capital);
     List<Societe> findByNbrEmployes(Double nbrEmployes);
+    
 
 }

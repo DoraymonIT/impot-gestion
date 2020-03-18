@@ -9,6 +9,7 @@ import com.gestionimpot.bean.Societe;
 import com.gestionimpot.service.facade.SocieteService;
 
 @RestController
+@CrossOrigin(origins = {"http://localhost:4200"})
 @RequestMapping("impot/societe")
 public class SocieteRestController {
 	@Autowired
