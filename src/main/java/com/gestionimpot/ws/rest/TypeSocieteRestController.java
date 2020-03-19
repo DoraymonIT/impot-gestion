@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import com.gestionimpot.bean.TypeSociete;
 import com.gestionimpot.service.facade.TypeSocieteService;
-
+//
 @RestController
 @CrossOrigin(origins = {"http://localhost:4200"})
 @RequestMapping("impot/typeSociete")
