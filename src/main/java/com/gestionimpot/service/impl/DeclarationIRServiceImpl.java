@@ -91,6 +91,12 @@ public class DeclarationIRServiceImpl implements DeclarationIRService {
             TauxDeIR foundedTauxDeIR = foundedDeclarationIR.getTauxDeIR();
             Double foundedSalaire = foundedDeclarationIR.getSalaire();
             Double foundedMontantDeclaration = foundedDeclarationIR.getMontantDeclaration();
+            if ( declarationIR.getMontantDeclaration() != 0 ) {
+                foundedMontantDeclaration = declarationIR.getMontantDeclaration();
+            }
+            if (declarationIR.getSalaire() != 0 ) {
+                foundedSalaire = declarationIR.getSalaire() ;
+            }
             if (declarationIR.getEmplyeRef() != null) {
                 foundedEmploye = employeDao.findByCin(declarationIR.getEmplyeRef());
                 foundedDeclarationIR.setEmplyeRef(declarationIR.getEmplyeRef());
@@ -105,8 +111,8 @@ public class DeclarationIRServiceImpl implements DeclarationIRService {
                 foundedDeclarationIR.setTauxDeIrRef(declarationIR.getTauxDeIrRef());
                 if (foundedTauxDeIR == null) return -4;
             }
-                foundedDeclarationIR.setSalaire(declarationIR.getSalaire());
-                foundedDeclarationIR.setMontantDeclaration(declarationIR.getMontantDeclaration());
+                foundedDeclarationIR.setSalaire(foundedSalaire);
+                foundedDeclarationIR.setMontantDeclaration(foundedMontantDeclaration);
                 foundedDeclarationIR.setEmploye(foundedEmploye);
                 foundedDeclarationIR.setSociete(foundedSociete);
                 foundedDeclarationIR.setTauxDeIR(foundedTauxDeIR);

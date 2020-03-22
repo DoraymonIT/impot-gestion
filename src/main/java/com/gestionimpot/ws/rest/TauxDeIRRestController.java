@@ -9,6 +9,7 @@ import java.util.Date;
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = {"http://localhost:4200"})
 @RequestMapping("impot/tauxDeIR")
 public class TauxDeIRRestController {
     @Autowired
@@ -45,7 +46,7 @@ public class TauxDeIRRestController {
     public int save(@RequestBody TauxDeIR tauxDeIR) {
         return tauxDeIRService.save(tauxDeIR);
     }
-    @DeleteMapping("/delete/ref")
+    @DeleteMapping("/delete/{ref}")
     public int deleteByRef(@PathVariable String ref) {
         return tauxDeIRService.deleteByRef(ref);
     }
