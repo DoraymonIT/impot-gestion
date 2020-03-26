@@ -9,6 +9,7 @@ import com.gestionimpot.bean.FactureGain;
 import com.gestionimpot.service.facade.FactureGainService;
 
 @RestController
+@CrossOrigin(origins = {"http://localhost:4200"})
 @RequestMapping("/impot/factureGain")
 public class FactureGainRestController {
 	

@@ -9,6 +9,7 @@ import java.util.Date;
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = {"http://localhost:4200"})
 @RequestMapping("/impot/FactureCharge")
 
 public class FactureChargeRestController {
