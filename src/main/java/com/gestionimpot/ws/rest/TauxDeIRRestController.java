@@ -46,7 +46,7 @@ public class TauxDeIRRestController {
     public int save(@RequestBody TauxDeIR tauxDeIR) {
         return tauxDeIRService.save(tauxDeIR);
     }
-    @DeleteMapping("/delete/ref")
+    @DeleteMapping("/delete/{ref}")
     public int deleteByRef(@PathVariable String ref) {
         return tauxDeIRService.deleteByRef(ref);
     }

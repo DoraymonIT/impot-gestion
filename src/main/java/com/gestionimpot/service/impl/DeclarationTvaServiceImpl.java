@@ -95,6 +95,8 @@ public class DeclarationTvaServiceImpl implements DeclarationTvaService {
         List<FactureCharge> factureCharges1 = foundedDeclarationTva.getFactureCharges();
         List<FactureGain> factureGains1 = foundedDeclarationTva.getFactureGains() ;
         Societe foundedSociete = foundedDeclarationTva.getSociete();
+        int foundedAnnee = foundedDeclarationTva.getAnnee();
+        double foundedTotalTva = foundedDeclarationTva.getTotalTva();
         if(declarationTva.getSocieteRef()!= null) {
             foundedSociete = societeDao.findByRef(declarationTva.getSocieteRef()) ;
             if (foundedSociete == null) return -2 ;
@@ -110,15 +112,21 @@ public class DeclarationTvaServiceImpl implements DeclarationTvaService {
         if (factureCharges != null){
             for (FactureCharge g :factureCharges) {
                 FactureCharge foundedFactureCharge = factureChargeDao.findByNumeroFacture(g.getNumeroFacture()) ;
-                if(foundedFactureCharge == null ) return -3 ;
+                if(foundedFactureCharge == null ) return -4 ;
                 factureCharges1.add(foundedFactureCharge);
             }
         }
+        if (declarationTva.getAnnee() != 0 ) {
+            foundedAnnee = declarationTva.getAnnee();
+        }
+        if (declarationTva.getTotalTva() != 0 ) {
+            foundedTotalTva = declarationTva.getTotalTva();
+        }
+        foundedDeclarationTva.setAnnee(foundedAnnee);
+        foundedDeclarationTva.setTotalTva(foundedTotalTva);
         foundedDeclarationTva.setSociete(foundedSociete);
         foundedDeclarationTva.setFactureGains(factureGains1);
         foundedDeclarationTva.setFactureCharges(factureCharges1);
-        if(declarationTva.getTotalTva() != null) foundedDeclarationTva.setTotalTva(declarationTva.getTotalTva());
-        if (declarationTva.getAnnee() != 0 ) foundedDeclarationTva.setAnnee(declarationTva.getAnnee());
         declarationTvaDao.save(foundedDeclarationTva);
         return 1;
     }
