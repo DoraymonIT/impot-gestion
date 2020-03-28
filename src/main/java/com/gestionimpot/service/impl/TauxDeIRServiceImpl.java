@@ -110,7 +110,8 @@ public class TauxDeIRServiceImpl implements TauxDeIRService {
             foundedTauxDeIR.setDateFin(tauxDeIR.getDateFin());
         }
 
-        if(tauxDeIR.getPourcentage() != 0 ) foundedTauxDeIR.setPourcentage(tauxDeIR.getPourcentage());
+        if(tauxDeIR.getPourcentage() != 0 )
+        foundedTauxDeIR.setPourcentage(tauxDeIR.getPourcentage());
         tauxDeIRDao.save(foundedTauxDeIR);
 
         return 1;

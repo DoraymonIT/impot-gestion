@@ -7,7 +7,9 @@ import org.springframework.web.bind.annotation.*;
 
 import com.gestionimpot.bean.Fournisseur;
 import com.gestionimpot.service.facade.FournisseurService;
+
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("impot/fournisseur")
 public class FournisseurRestController {
 @Autowired

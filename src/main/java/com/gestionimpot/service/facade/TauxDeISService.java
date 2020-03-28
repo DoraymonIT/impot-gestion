@@ -16,6 +16,7 @@ public interface TauxDeISService {
     List<TauxDeIS> findByMontantMin( double montantMin);
     List<TauxDeIS> findByMontantMax( double montantMax);
     TauxDeIS findByRef(String ref);
+    public int update(TauxDeIS tauxdeis);
     int deleteByRef(String ref);
     int save(TauxDeIS tauxDeIS);
 }

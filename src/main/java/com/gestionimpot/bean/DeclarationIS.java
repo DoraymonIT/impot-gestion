@@ -11,8 +11,7 @@ public class DeclarationIS  {
 	private Long id;
 	private String reference;
 	private String tauxDeISRef;
-        @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-	@ManyToOne
+        @ManyToOne
 	private TauxDeIS tauxDeIS;
 	private String declarationTvaRef ;
         @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)

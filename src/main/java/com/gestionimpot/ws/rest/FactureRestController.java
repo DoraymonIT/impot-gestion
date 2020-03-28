@@ -10,8 +10,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Date;
 import java.util.List;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/impot/facture")
 public class FactureRestController {
     @Autowired

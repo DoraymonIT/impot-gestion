@@ -57,8 +57,7 @@ public class DeclarationISServiceImpl implements DeclarationISService {
 
     @Override
     public double totalGain(String referencetva) {
-
-        List<FactureGain> foundedfacturegain = declarationTvaDao.findByRef(referencetva).getFactureGains();
+        List<FactureGain> foundedfacturegain = declarationTvaDao.findByRef(referencetva).getFactureGains(); 
         return foundedfacturegain.stream().mapToDouble(Facture::getMontantTTC).sum();
     }
 
@@ -70,17 +69,16 @@ public class DeclarationISServiceImpl implements DeclarationISService {
 
     @Override
     public double beneficeNet(String referencetva) {
-
         return (totalGain(referencetva) - totalCharge(referencetva));
     }
-
+    
     @Override
     public double montantWithNoPenality(String declarationisref) {
-
+    
         String referencetaux = tauxDeISDao.findByRef(declarationISDao.findByReference(declarationisref).getTauxDeIS().getRef()).getRef();
         String referencetva = declarationTvaDao.findByRef(declarationISDao.findByReference(declarationisref).getDeclarationTva().getRef()).getRef();
         double montant = DeclarationISServiceImpl.this.beneficeNet(referencetva);
-
+    
         TauxDeIS foundedTis = tauxDeISDao.findByRef(referencetaux);
         if (montant <= foundedTis.getMontantMin()) {
             return montant * foundedTis.getTauxMin();
@@ -107,7 +105,7 @@ public class DeclarationISServiceImpl implements DeclarationISService {
         if (mp == 0) {
             return mwnp;
         } else {
-            return mwnp * mp;
+            return mwnp + mp;
         }
     }
 
@@ -149,30 +147,30 @@ public class DeclarationISServiceImpl implements DeclarationISService {
     public int update(DeclarationIS declarationIS) {
         DeclarationIS foundedDeclarationIS = declarationISDao.findByReference(declarationIS.getReference());
         if (foundedDeclarationIS == null) {
-            return -1;
+            return -5;
         }
         TauxDeIS foundedTauxDeIS = foundedDeclarationIS.getTauxDeIS();
         DeclarationTva foundedDeclarationTva = foundedDeclarationIS.getDeclarationTva();
         Societe foundedSociete = foundedDeclarationIS.getSociete();
         if (declarationIS.getTauxDeIS() != null) {
-            foundedDeclarationIS.setTauxDeISRef(declarationIS.getTauxDeISRef());
             foundedTauxDeIS = tauxDeISDao.findByRef(declarationIS.getTauxDeISRef());
+            foundedDeclarationIS.setTauxDeISRef(declarationIS.getTauxDeISRef());
             if (foundedTauxDeIS == null) {
-                return -2;
+                return -6;
             }
         }
         if (declarationIS.getSocieteRef() != null) {
             foundedSociete = societeDao.findByRef(declarationIS.getSocieteRef());
             foundedDeclarationIS.setSocieteRef(declarationIS.getSocieteRef());
             if (foundedSociete == null) {
-                return -3;
+                return -7;
             }
         }
         if (declarationIS.getDeclarationTvaRef() != null) {
             foundedDeclarationTva = declarationTvaDao.findByRef(declarationIS.getDeclarationTvaRef());
             foundedDeclarationIS.setDeclarationTvaRef(declarationIS.getDeclarationTvaRef());
             if (foundedDeclarationTva == null) {
-                return -4;
+                return -8;
             }
         }
         foundedDeclarationIS.setReference(declarationIS.getReference());

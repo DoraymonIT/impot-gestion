@@ -64,7 +64,7 @@ public class DeclarationTvaServiceImpl implements DeclarationTvaService {
         }
         for (FactureCharge g :factureCharges) {
             FactureCharge foundedFactureCharge = factureChargeDao.findByNumeroFacture(g.getNumeroFacture()) ;
-            if(foundedFactureCharge == null ) return -3 ;
+            if(foundedFactureCharge == null ) return -4 ;
             factureCharges1.add(foundedFactureCharge);
         }
         if (foundedSociete == null ) return  -1 ;

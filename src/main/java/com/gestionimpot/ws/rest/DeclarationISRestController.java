@@ -10,6 +10,7 @@ import java.util.List;
 import org.springframework.format.annotation.DateTimeFormat;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("impot/declarationIS")
 public class DeclarationISRestController {
 

@@ -10,6 +10,7 @@ import java.util.*;
 import org.springframework.format.annotation.DateTimeFormat;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/impot/TauxDeIS")
 public class TauxDeISRestController {
     @Autowired
@@ -54,5 +55,9 @@ public class TauxDeISRestController {
     @PostMapping("/")
     public int save(@RequestBody  TauxDeIS tauxDeIS) {
         return tauxDeISService.save(tauxDeIS);
+    }
+    @PutMapping("/update")
+    public int update(@RequestBody  TauxDeIS tauxDeIS) {
+        return tauxDeISService.update(tauxDeIS);
     }
 }

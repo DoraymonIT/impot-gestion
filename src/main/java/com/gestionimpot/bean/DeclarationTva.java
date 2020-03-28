@@ -15,9 +15,9 @@ public class DeclarationTva {
 	@ManyToOne
 	private Societe societe;
 	private int annee;
-	@OneToMany
+        @OneToMany
 	private List<FactureGain> factureGains;
-	@OneToMany
+    	@OneToMany
 	private List<FactureCharge> factureCharges;
 
 	public Double getTotalTva() {
