@@ -74,15 +74,15 @@ public class DeclarationISRestController {
 
     @GetMapping("/montantpenality/{declarationisref}/{datefacture}/{datepaiment}")
     public double montantPenality(@PathVariable String declarationisref,
-            @PathVariable @DateTimeFormat(pattern = "dd-MM-yyyy") Date datefacture,
-            @PathVariable @DateTimeFormat(pattern = "dd-MM-yyyy") Date datepaiment) {
+            @PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd") Date datefacture,
+            @PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd") Date datepaiment) {
         return declarationISService.montantPenality(declarationisref, datefacture, datepaiment);
     }
 
      @GetMapping("/montantWithPenality/{declarationisref}/{datefacture}/{datepaiment}")
     public double montantWithPenality(@PathVariable String declarationisref,
-            @PathVariable @DateTimeFormat(pattern = "dd-MM-yyyy") Date datefacture,
-            @PathVariable @DateTimeFormat(pattern = "dd-MM-yyyy") Date datepaiment) {
+            @PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd") Date datefacture,
+            @PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd") Date datepaiment) {
         return declarationISService.montantWithPenality(declarationisref, datefacture, datepaiment);
     }
      @PutMapping("/update/")

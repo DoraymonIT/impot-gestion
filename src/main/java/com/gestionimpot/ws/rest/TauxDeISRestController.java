@@ -17,15 +17,15 @@ public class TauxDeISRestController {
     TauxDeISService tauxDeISService ;
     
      @GetMapping("/pourcentageRetard/{dateFacturation}/{datePaiement}")
-    public double pourcentageRetard(@PathVariable @DateTimeFormat(pattern= "dd-MM-yyyy")Date dateFacturation,
-            @PathVariable @DateTimeFormat(pattern= "dd-MM-yyyy") Date datePaiement) 
+    public double pourcentageRetard(@PathVariable @DateTimeFormat(pattern= "yyyy-MM-dd")Date dateFacturation,
+            @PathVariable @DateTimeFormat(pattern= "yyyy-MM-dd") Date datePaiement) 
     {
         return tauxDeISService.pourcentageRetard(dateFacturation, datePaiement);
     }
     
     
     @GetMapping("/dateDebut/{dateDebut}")
-    public List<TauxDeIS> findByDateDebut(@PathVariable  @DateTimeFormat(pattern= "dd-MM-yyyy") Date dateDebut) {
+    public List<TauxDeIS> findByDateDebut(@PathVariable  @DateTimeFormat(pattern= "yyyy-MM-dd") Date dateDebut) {
         return tauxDeISService.findByDateDebut(dateDebut);
     }
     @GetMapping("/")
@@ -33,7 +33,7 @@ public class TauxDeISRestController {
         return tauxDeISService.findAll();
     }
     @GetMapping("/dateFin/{dateFin}")
-    public List<TauxDeIS> findByDateFin(@PathVariable  @DateTimeFormat(pattern= "dd-MM-yyyy") Date dateFin) {
+    public List<TauxDeIS> findByDateFin(@PathVariable  @DateTimeFormat(pattern= "yyyy-MM-dd") Date dateFin) {
         return tauxDeISService.findByDateFin(dateFin);
     }
     @GetMapping("/montantMin/{montantMin}")
