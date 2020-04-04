@@ -34,4 +34,9 @@ public class FournisseurRestController {
     public int deleteByCin(@PathVariable  String cin) {
         return fournisseurService.deleteByCin(cin);
     }
+    @PostMapping("/upd/")
+	public int update(@RequestBody Fournisseur fournisseur) {
+		return fournisseurService.update(fournisseur);
+	}
+    
 }

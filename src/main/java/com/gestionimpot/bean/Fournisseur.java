@@ -12,6 +12,7 @@ public class Fournisseur {
 	private Long id;
 	private String cin;
 	private String nom;
+	private String prenom;
 
 	public Long getId() {
 		return id;
@@ -35,6 +36,14 @@ public class Fournisseur {
 
 	public void setNom(String nom) {
 		this.nom = nom;
+	}
+
+	public String getPrenom() {
+		return prenom;
+	}
+
+	public void setPrenom(String prenom) {
+		this.prenom = prenom;
 	}
 
 

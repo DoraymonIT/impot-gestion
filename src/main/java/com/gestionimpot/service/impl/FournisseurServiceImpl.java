@@ -10,10 +10,9 @@ import com.gestionimpot.service.facade.FournisseurService;
 import org.springframework.stereotype.Service;
 
 @Service
-public class FournisseurServiceImpl implements FournisseurService{
-    @Autowired
-    FournisseurDao fournisseurDao;
-
+public class FournisseurServiceImpl implements FournisseurService {
+	@Autowired
+	FournisseurDao fournisseurDao;
 
 	@Override
 	public Fournisseur findByCin(String cin) {
@@ -34,8 +33,9 @@ public class FournisseurServiceImpl implements FournisseurService{
 	public int save(Fournisseur fournisseur) {
 		Fournisseur foundedFourniseur = fournisseurDao.findByCin(fournisseur.getCin());
 
-		if (foundedFourniseur != null) return -1;
-		else{
+		if (foundedFourniseur != null)
+			return -1;
+		else {
 			fournisseurDao.save(fournisseur);
 			return 1;
 		}
@@ -44,10 +44,26 @@ public class FournisseurServiceImpl implements FournisseurService{
 	@Override
 	public int deleteByCin(String cin) {
 		Fournisseur foundedFourniseur = fournisseurDao.findByCin(cin);
-		if (foundedFourniseur == null) return -1;
-		else{
+		if (foundedFourniseur == null)
+			return -1;
+		else {
 			fournisseurDao.delete(foundedFourniseur);
 			return 1;
+		}
+	}
+
+	@Override
+	public int update(Fournisseur fournisseur) {
+		Fournisseur foundedfournisseur = fournisseurDao.findByCin(fournisseur.getCin());
+		if (foundedfournisseur == null)
+			return -1;
+
+		else {
+			foundedfournisseur.setPrenom(fournisseur.getPrenom());
+			foundedfournisseur.setNom(fournisseur.getNom());
+			fournisseurDao.save(foundedfournisseur);
+			return 1;
+
 		}
 	}
 }

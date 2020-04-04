@@ -43,27 +43,27 @@ public class FactureChargeRestController {
         return factureChargeService.deleteByRef(ref);
     }
     @GetMapping("/numeroFacture/{numeroFacture}")
-	public FactureCharge findByNumeroFacture(Long numeroFacture) {
+	public FactureCharge findByNumeroFacture(@PathVariable Long numeroFacture) {
 		return factureChargeService.findByNumeroFacture(numeroFacture);
 	}
     @GetMapping("/montantHT/{montantHT}")
-	public List<FactureCharge> findByMontantHT(double montantHT) {
+	public List<FactureCharge> findByMontantHT(@PathVariable double montantHT) {
 		return factureChargeService.findByMontantHT(montantHT);
 	}
     @GetMapping("/montantTTC/{montantTTC}")
-	public List<FactureCharge> findByMontantTTC(double montantTTC) {
+	public List<FactureCharge> findByMontantTTC(@PathVariable double montantTTC) {
 		return factureChargeService.findByMontantTTC(montantTTC);
 	}
     @GetMapping("/tva/{tva}")
-	public List<FactureCharge> findByTva(double tva) {
+	public List<FactureCharge> findByTva(@PathVariable double tva) {
 		return factureChargeService.findByTva(tva);
 	}
     @GetMapping("/datePaiement/{datePaiement}")
-	public List<FactureCharge> findByDatePaiement(Date datePaiement) {
+	public List<FactureCharge> findByDatePaiement(@PathVariable Date datePaiement) {
 		return factureChargeService.findByDatePaiement(datePaiement);
 	}
     @GetMapping("/dateFacturation/{dateFacturation}")
-	public List<FactureCharge> findByDateFacturation(Date dateFacturation) {
+	public List<FactureCharge> findByDateFacturation(@PathVariable Date dateFacturation) {
 		return factureChargeService.findByDateFacturation(dateFacturation);
 	}
     @PostMapping("/upd/")
