@@ -55,6 +55,11 @@ public class FactureGainServiceImpl implements FactureGainService {
 		}
 	}
 
+       @Override
+       public List<FactureGain> findBySocieteRef(String ref) {
+       return factureGainDao.findBySocieteRef(ref);
+       }
+
 
 }
 

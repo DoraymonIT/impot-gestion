@@ -30,7 +30,7 @@ public interface FactureChargeService {
 	
 	public int update(FactureCharge factureCharge);
 	
-	public List<FactureCharge> findBySocieteRef(String ref );
+	public List<FactureCharge> findBySocieteRef(String ref);
 
 
 }

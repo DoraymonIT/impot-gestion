@@ -12,6 +12,7 @@ public interface DeclarationTvaService {
     public List<DeclarationTva> findByTotalTva(double totalTva);
     public List<DeclarationTva> findByAnnee(int annee);
     public List<DeclarationTva> findAll();
+    public DeclarationTva findBysocieteRef(String societeref);
     public int save(DeclarationTva declarationTva , List<FactureGain> factureGains , List<FactureCharge> factureCharges);
     public int deleteByRef(String ref);
     public int update(DeclarationTva declarationTva ,  List<FactureGain> factureGains , List<FactureCharge> factureCharges);

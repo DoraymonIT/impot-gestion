@@ -16,7 +16,7 @@ public interface DeclarationISService {
 
     public int DeleteByRef(String ref);
 
-    public List<DeclarationIS> findBySocieteRef(String ref);
+    public DeclarationIS findBySocieteRef(String ref);
 
     public int save(DeclarationIS declarationIs);
 

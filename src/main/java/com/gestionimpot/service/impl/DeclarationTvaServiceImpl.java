@@ -156,4 +156,9 @@ public class DeclarationTvaServiceImpl implements DeclarationTvaService {
         declarationTvaDao.save(foundedDeclarationTva);
         return 1; 
     }
+
+    @Override
+    public DeclarationTva findBysocieteRef(String societeref) {
+    return declarationTvaDao.findBysocieteRef(societeref);
+    }
 }

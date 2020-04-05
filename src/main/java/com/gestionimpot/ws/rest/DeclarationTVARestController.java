@@ -21,7 +21,12 @@ public class DeclarationTVARestController {
     public DeclarationTva findByRef(@PathVariable  String ref) {
         return declarationTvaService.findByRef(ref);
     }
+    @GetMapping("/refsociete/{ref}")
+    public DeclarationTva findBysocieteRef(String societeref) {
+        return declarationTvaService.findBysocieteRef(societeref);
+    }
 
+    
     @GetMapping("/totalTva/{totalTva}")
     public List<DeclarationTva> findByTotalTva(@PathVariable  double totalTva) {
         return declarationTvaService.findByTotalTva(totalTva);

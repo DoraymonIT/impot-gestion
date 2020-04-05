@@ -15,6 +15,7 @@ public class FactureCharge extends Facture {
 	private String ref ;
 
 	private String fournisseurCin ;
+        
 	@ManyToOne
 	private Fournisseur fournisseur;
 

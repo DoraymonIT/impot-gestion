@@ -33,7 +33,7 @@ public class DeclarationISRestController {
     }
 
     @GetMapping("/societe/{ref}")
-    public List<DeclarationIS> findBySocieteRef(@PathVariable String ref) {
+    public DeclarationIS findBySocieteRef(@PathVariable String ref) {
         return declarationISService.findBySocieteRef(ref);
     }
 

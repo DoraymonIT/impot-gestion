@@ -19,7 +19,7 @@ public class Facture implements Serializable{
 	protected Societe societe;
 	protected String societeRef;
 	@JsonFormat(pattern="yyyy-MM-dd")
-	protected Date dateFacturation;
+	protected Date dateFacturation; 
 	@JsonFormat(pattern="yyyy-MM-dd")
 	protected Date datePaiement;
 	@ManyToOne

@@ -15,6 +15,8 @@ public interface FactureGainService {
 	public List<FactureGain> findByClientCne(String clientCne);
 
 	public int deleteByRef(Long ref);
+        
+        public List<FactureGain> findBySocieteRef(String ref );
 
 
 }

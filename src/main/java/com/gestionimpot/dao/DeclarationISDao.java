@@ -13,7 +13,7 @@ import java.util.List;
 public interface DeclarationISDao extends JpaRepository<DeclarationIS, Long> {
     public DeclarationIS findByReference(String reference);
     public List<DeclarationIS> findAll();
-    public List<DeclarationIS> findBySocieteRef(String societeRef);
+    public DeclarationIS findBySocieteRef(String societeRef);
     public List<DeclarationIS> findByDeclarationTvaRef(String declarationTvaRef );
     public List<DeclarationIS> findByTauxDeISRef(String tauxDeISRef );
 

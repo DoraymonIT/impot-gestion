@@ -11,10 +11,31 @@ public class FactureGain extends Facture {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
-	private String clientCne ;
+        private String ref ;
+        
+        private String clientCne ;
+
+    public String getSocieteRef() {
+        return societeRef;
+    }
+    
+    public void setSocieteRef(String societeRef) {
+        this.societeRef = societeRef;
+    }
+        
+    
 	@ManyToOne
 	private Client client;
+        
 
+        public String getRef() {
+        return ref;
+        }
+
+        public void setRef(String ref) {
+        this.ref = ref;
+        }
+        
 	public String getClientCne() {
 		return clientCne;
 	}

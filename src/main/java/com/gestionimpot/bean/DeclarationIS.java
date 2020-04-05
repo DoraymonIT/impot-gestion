@@ -14,7 +14,6 @@ public class DeclarationIS  {
         @ManyToOne
 	private TauxDeIS tauxDeIS;
 	private String declarationTvaRef ;
-        @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
 	@ManyToOne
 	private DeclarationTva declarationTva ;
 	private  String societeRef;

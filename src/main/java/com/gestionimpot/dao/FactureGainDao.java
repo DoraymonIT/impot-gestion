@@ -13,14 +13,15 @@ public interface FactureGainDao extends JpaRepository<FactureGain, Long> {
 	
   FactureGain findByNumeroFacture(Long numeroFacture);
 	
-  List<FactureGain> findAll();
+  public List<FactureGain> findAll();
 
-  List<FactureGain> findByDatePaiement(Date datePaiement);
+  public List<FactureGain> findByDatePaiement(Date datePaiement);
 
-  List<FactureGain> findByDateFacturation(Date dateFacturation);
+  public List<FactureGain> findByDateFacturation(Date dateFacturation);
 
-  List<FactureGain> findByClientCne(String clientCne);
+  public List<FactureGain> findByClientCne(String clientCne);
 
+  public List<FactureGain> findBySocieteRef(String ref);
 
 
 
